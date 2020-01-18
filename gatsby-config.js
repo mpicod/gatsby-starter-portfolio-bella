@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: "gatsby-source-prismic",
       options: {
-        repositoryName: "gatsby-starter-portfolio-bella",
+        repositoryName: "demo-bella",
         accessToken: `MC5YaUt0N0JBQUFDUUFldDVt.YO-_vVfvv73vv71377-9D--_ve-_vREGFjRvMX3vv70z77-977-9B--_ve-_vUrvv73vv71LOhHvv71L`,
         linkResolver: ({ node, key, value }) => doc => `/${doc.uid}`,
         htmlSerializer: ({ node, key, value }) => (
