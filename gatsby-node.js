@@ -47,7 +47,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const templateHomePage = path.resolve("src/template/index.jsx");
 
-  contacts.data.allPrismicHomePage.edges.forEach(edge => {
+  homePage.data.allPrismicHomePage.edges.forEach(edge => {
     createPage({
       path: `/${edge.node.lang}`,
       component: templateHomePage,

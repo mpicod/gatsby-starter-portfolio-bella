@@ -144,7 +144,7 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
   return (
     <Layout>
       <Header>
-        <Logo>Bella Inc.</Logo>
+        <Logo>Bella Incorp</Logo>
         <Hero
           justifyContent="center"
           alignItems="center"
