@@ -28,32 +28,31 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  const homePage = await graphql(`
-    {
-      allPrismicHomePage {
-        edges {
-          node {
-            id
-            lang
-            uid
-            data {
-              
-            }
-          }
-        }
-      }
-    }
-  `);
+  // const homePage = await graphql(`
+  //   {
+  //     prismicHomepage {
+  //       id
+  //       data {
+  //         page_subtitle {
+  //           text
+  //         }
+  //         title {
+  //           text
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
 
-  const templateHomePage = path.resolve("src/template/index.jsx");
+  // const templateHomePage = path.resolve("src/template/index.jsx");
 
-  homePage.data.allPrismicHomePage.edges.forEach(edge => {
-    createPage({
-      path: `/${edge.node.lang}`,
-      component: templateHomePage,
-      context: {
-        uid: edge.node.uid
-      }
-    });
-  });
+  // homePage.data.prismicHomePage.edges.forEach(edge => {
+  //   createPage({
+  //     path: `/${edge.node.lang}`,
+  //     component: templateHomePage,
+  //     context: {
+  //       uid: edge.node.uid
+  //     }
+  //   });
+  // });
 };
