@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import styled from "react-emotion";
 import { Flex } from "grid-emotion";
 import Footer from "../components/Footer";
+import PartnersBanner from "../components/PartnersBanner";
 import Layout from "../components/Layout";
 import GridItem from "../components/GridItem";
 import BeTheHero from "../images/be_the_hero.svg";
@@ -26,16 +27,16 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
   return (
     <Layout>
       <Nav></Nav>
-      <header className="container d-flex ">
+      <header className="container d-flex home">
         <div className="row w-100">
-          <div className="col-6">
+          <div className="col-md-6 col-sm-12">
             <h1>{data.title.text}</h1>
             <h3>{data.page_subtitle.text}</h3>
             <button class="btn btn-primary" type="button" value="Input">
               Contactez-nous !
             </button>
           </div>
-          <div className="col-6">
+          <div className="col-md-6 col-sm-12">
             <img src={Background} />
           </div>
         </div>
@@ -87,6 +88,9 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
                   Lorem ipsum de la super class stylé :D Lorem ipsum de la super
                   class stylé :D
                 </p>
+                <a className="align-self-end text-black-secondary font-weight-600">
+                  Voir plus <img src={Arrow} className="btn-arrow" />
+                </a>
               </div>
             </div>
             <div className="col-4">
@@ -97,9 +101,9 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
                   Lorem ipsum de la super class stylé :D Lorem ipsum de la super
                   class stylé :D
                 </p>
-                <a> 
-                  
-                <a/>
+                <a className="align-self-end text-black-secondary font-weight-600">
+                  Voir plus <img src={Arrow} className="btn-arrow" />
+                </a>
               </div>
             </div>
             <div className="col-4">
@@ -110,6 +114,9 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
                   Lorem ipsum de la super class stylé :D Lorem ipsum de la super
                   class stylé :D
                 </p>
+                <a className="align-self-end text-black-secondary font-weight-600">
+                  Voir plus <img src={Arrow} className="btn-arrow" />
+                </a>
               </div>
             </div>
           </div>
@@ -132,17 +139,20 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
       <section className="container d-flex flex-column align-items-center justify-content-center">
         <h2 className="mb-4 font-weight-600">Témoignages</h2>
         <div className="row justify-content-center">
-          <div className="col-6 card p-4">
-            <img src={Testimony} className="testimony-img" />
-            <h3 className="text-black">
-              "Lorem ipsum de la super class stylé :D Lorem ipsum de la super
-              class stylé :D"
-            </h3>
-            <small className="text-primary">Jean-Yves</small>
-            <small className="">CEO of MyCompany</small>
+          <div className="col-md-6 col-sm-12 ">
+            <div className="card p-4">
+              <img src={Testimony} className="testimony-img" />
+              <h5 className="text-black">
+                "L'équipe ZenOps est vraiment très Zen, c'est très z'agréable de
+                bosser avec tant de zenitude !"
+              </h5>
+              <small className="text-primary">Jean-Yves</small>
+              <small className="">CEO of MyCompany</small>
+            </div>
           </div>
         </div>
       </section>
+      <PartnersBanner />
       <Footer />
     </Layout>
   );

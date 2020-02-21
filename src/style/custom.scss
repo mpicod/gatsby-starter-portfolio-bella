@@ -10,7 +10,7 @@ $theme-colors: (
   "danger": #ff4136,
   "muted": #dadbdb,
   "black": #020d01,
-  "black-secondary": #69707f,
+  "black-secondary": #454545,
   "black-tertiary": #8798ad,
   "gray": #bfc5d2,
   "gray-secondary": #f4f6fc,
@@ -44,7 +44,10 @@ body {
 }
 
 header {
-  height: 100vh;
+  &.home {
+    height: 100vh;
+  }
+  min-height: 50vh;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -81,7 +84,7 @@ section {
 }
 
 ul {
-  padding: unset;
+  margin: unset;
 }
 
 .team-section {
@@ -89,4 +92,33 @@ ul {
   background-image: url(../images/team.jpg);
   background-position: bottom;
   background-size: cover;
+}
+
+a:hover .btn-arrow {
+  transform: translateX(10px);
+  transition: 0.3s all ease-in-out;
+}
+
+a .btn-arrow {
+  transition: 0.3s all ease-in-out;
+}
+
+a {
+  cursor: pointer;
+}
+
+.trend-number {
+  font-weight: 600;
+  font-size: 3rem;
+  color: theme-color("primary");
+}
+
+.featured-bloc:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.featured-partners {
+  display: flex;
+  img {
+    margin: 0.5em;
+  }
 }
