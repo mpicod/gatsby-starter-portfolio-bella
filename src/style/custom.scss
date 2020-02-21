@@ -116,6 +116,14 @@ a {
 .featured-bloc:nth-child(even) {
   flex-direction: row-reverse;
 }
+.featured-bloc {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .featured-partners {
   display: flex;
   img {

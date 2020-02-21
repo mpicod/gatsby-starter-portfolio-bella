@@ -6,7 +6,7 @@ import PartnersBanner from "../components/PartnersBanner";
 import Layout from "../components/Layout";
 import Moderniser from "../images/moderniser.svg";
 import Simplify from "../images/simplify.svg";
-import Img from "gatsby-image";
+
 import Secure from "../images/secure.svg";
 import Background from "../images/background.png";
 import Saltstack from "../images/ss.svg";
@@ -26,7 +26,7 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
           <div className="col-md-6 col-sm-12">
             <h1>{data.title.text}</h1>
             <h3>{data.page_subtitle.text}</h3>
-            <button class="btn btn-primary" type="button" value="Input">
+            <button className="btn btn-primary" type="button" value="Input">
               Contactez-nous !
             </button>
           </div>

@@ -28,6 +28,31 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
+  const pillars = await graphql(`
+    {
+      allPrismicPillarpage {
+        edges {
+          node {
+            id
+            uid
+          }
+        }
+      }
+    }
+  `);
+
+  const pillarTemplate = path.resolve("src/templates/pillar.jsx");
+
+  pillars.data.allPrismicPillarpage.edges.forEach(edge => {
+    createPage({
+      path: `/${edge.node.uid}`,
+      component: pillarTemplate,
+      context: {
+        uid: edge.node.uid
+      }
+    });
+  });
+
   // const homePage = await graphql(`
   //   {
   //     prismicHomepage {
