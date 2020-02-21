@@ -279,7 +279,7 @@ $box-shadow-lg: 0 1rem 3rem rgba(theme-color("primary"), 0.175);
 $font-family-sans-serif: "Source-sans-pro", -apple-system, BlinkMacSystemFont,
   "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-serif: "Philosopher", "serif";
+$font-family-serif: "Raleway", "serif";
 // $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 //   "Liberation Mono", "Courier New", monospace ;
 // $font-family-base: $font-family-sans-serif ;
@@ -320,7 +320,7 @@ $font-weight-900: 900;
 $headings-font-family: $font-family-serif; // $headings-font-family: inherit ;
 // $headings-font-weight: 500 ;
 // $headings-line-height: 1.2 ;
-$headings-color: theme-color("black");
+$headings-color: white;
 
 // $display1-size: 6rem ;
 // $display2-size: 5.5rem ;

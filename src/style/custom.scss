@@ -1,6 +1,6 @@
 // Custom color always set before importing other fils. These will override default value
 $theme-colors: (
-  "primary": #5450ff,
+  "primary": #22da11,
   "secondary": #ebf0ff,
   "pink": #ff2e8d,
   "pink-secondary": #ffbbda,
@@ -8,14 +8,14 @@ $theme-colors: (
   "tertiary": #d5d4ff,
   "tertiary-2": #eaeaff,
   "danger": #ff4136,
-  "muted": #b0bac9,
-  "black": #2a294e,
+  "muted": #dadbdb,
+  "black": #020d01,
   "black-secondary": #69707f,
   "black-tertiary": #8798ad,
   "gray": #bfc5d2,
   "gray-secondary": #f4f6fc,
   "gray-tertiary": #eef3f5,
-  "green": #67d563,
+  "green": #67d563
 );
 
 // Have to import functions and mixins to prevent errors in variables mixins (in _variables.scss)
@@ -40,208 +40,53 @@ $theme-colors: (
 
 body {
   font-family: $font-family-sans-serif;
+  background-color: theme-color("black");
 }
-input {
-  border: none;
-}
+
 header {
-  min-height: 100vh;
-  background-color: #5450ff;
-  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a5a3ff' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-h1 {
-  margin-top: 10vmax;
-}
-section {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
+  justify-content: start;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.customer {
-  width: 100px;
-}
-
-.overlap-section {
-  margin-top: -10em;
-}
-
-.border-2 {
-  border-width: 2px;
-}
-
-.btn {
-  font-weight: 600;
-  padding: 0.575rem 1rem;
-  font-size: 0.75rem;
-  cursor: pointer;
 }
 
 h2 {
-  font-weight: 800;
+  font-weight: 600;
 }
-
-@media screen and (min-width: 720px) {
-  .benefit:nth-child(2) {
-    margin-top: 5em;
-  }
-
-  .benefit:nth-child(3) {
-    margin-top: 10em;
-  }
-}
-
-.logo-footer {
-  width: 80px;
-}
-
-a {
-  text-decoration: none;
-  &:hover {
-    color: unset;
-    text-decoration: none;
-    // font-weight: 600;
-  }
-}
-
-.query-email {
-  border-radius: 3px;
-  background-color: $pink-tertiary;
-  transition: all 0.2s;
+section {
+  min-height: 70vh;
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  .text-field {
-    background-color: transparent;
-    color: $pink;
-    border: none;
-    border-left: 2px transparent solid;
-    border-radius: 3px;
-    transition: 0.2s all ease-in-out;
-    width: 100%;
-
-    &::placeholder {
-      color: $pink-secondary;
-    }
-    &:focus {
-      border-left: 2px solid $pink;
-      transition: 0.2s all ease-in-out;
-    }
-  }
-
-  .send-button {
-    padding: 8px;
-    border-radius: 3px;
-    cursor: pointer;
-    border: none;
-    background-color: $pink;
-    font-size: 12px;
-    color: white;
-    margin: 0.2em;
-    white-space: nowrap;
-  }
+  align-items: center;
+  justify-content: center;
 }
 
-.cta {
-  font-weight: 500;
-  position: relative;
-  &::before {
-    content: "";
-    width: 110%;
-    height: 5px;
-    border-radius: 99999px;
-    display: block;
-    bottom: 0;
-    position: absolute;
-    left: -0.2em;
-    transition: 0.2s all ease-in-out;
-    z-index: -1;
-  }
-  &:hover {
-    &::before {
-      height: 7px;
-      transition: 0.2s all ease-in-out;
-    }
-  }
-  &-pink {
-    &::before {
-      background-color: $pink;
-    }
-  }
-  &-light {
-    color: white;
-    &:hover {
-      color: white;
-    }
-  }
-  &-dark {
-    color: $black;
-    &:hover {
-      color: $black;
-    }
-  }
+.navbar-brand {
+  width: 50px;
 }
 
-.link-btn {
-  &-pink {
-    &::before {
-      background-color: $pink;
-    }
-  }
-  &-primary {
-    &::before {
-      background-color: $primary;
-    }
-  }
-  &-light {
-    color: white;
-    &:hover {
-      color: white;
-    }
-  }
-  &-dark {
-    color: $black;
-  }
-  &::before {
-    content: "";
-    width: 0%;
-    height: 5px;
-    border-radius: 99999px;
-    display: block;
-    bottom: 0;
-    position: absolute;
-    right: -0.2em;
-    transition: 0.2s all ease-in-out;
-    z-index: -1;
-  }
-  &:hover {
-    &::before {
-      transition: 0.2s all ease-in-out;
-      right: unset;
-      left: -0.2em;
-      width: 110%;
-    }
-  }
+.navbar-nav {
+  align-items: center;
 }
-
-.svg-wave {
-  margin-top: -1px;
-}
-
-// necesarry for link ::before positioning
-.nav-item {
-  position: relative;
+.navbar-collapse {
+  justify-content: end;
 }
 
 .nav-link {
-  padding: 0;
+  color: white;
 }
 
-.testimonial-quotes {
-  position: absolute;
-  left: 4em;
-  top: 4em;
-  opacity: 0.1;
+.testimony-img {
+  border-radius: 50%;
+  width: 80px;
+}
+
+ul {
+  padding: unset;
+}
+
+.team-section {
+  min-height: 80vh;
+  background-image: url(../images/team.jpg);
+  background-position: bottom;
+  background-size: cover;
 }
