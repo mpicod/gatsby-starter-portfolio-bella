@@ -1,17 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import styled from "react-emotion";
-import { Flex } from "grid-emotion";
 import Footer from "../components/Footer";
 import PartnersBanner from "../components/PartnersBanner";
 import Layout from "../components/Layout";
-import GridItem from "../components/GridItem";
-import BeTheHero from "../images/be_the_hero.svg";
-import DataReport from "../images/data_report.svg";
-import MayTheForce from "../images/may_the_force.svg";
 import Moderniser from "../images/moderniser.svg";
 import Simplify from "../images/simplify.svg";
+import Img from "gatsby-image";
 import Secure from "../images/secure.svg";
 import Background from "../images/background.png";
 import Saltstack from "../images/ss.svg";
@@ -19,7 +14,6 @@ import Testimony from "../images/profil.png";
 import Arrow from "../images/arrows.svg";
 import Nav from "../components/nav";
 import "../style/custom.scss";
-import { backgrounds } from "polished";
 
 const IndexPage = ({ data: { caseStudies, homePage } }) => {
   const { edges } = caseStudies;
@@ -44,98 +38,41 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
 
       <div className="container-fluid bg-black team-section">
         <section className="container d-flex flex-column align-items-center justify-content-center ">
-          <h2 className="mb-4 font-weight-600">La Mission de ZenOps 360</h2>
+          <h2 className="mb-4 font-weight-600">{data.mission_title.text}</h2>
           <div className="row">
-            <div className="col-4">
-              <div className="card p-4">
-                <h2 className="text-black font-weight-500">Conseil</h2>
-                <p className="text-black-secondary">
-                  Lorem ipsum de la super class stylé :D Lorem ipsum de la super
-                  class stylé :D
-                </p>
+            {data.missions.map(m => (
+              <div className="col-md-4 col-sm-12">
+                <div className="card p-4">
+                  <h2 className="text-black font-weight-500">
+                    {m.mission_title1.text}
+                  </h2>
+                  <p className="text-black-secondary">{m.mission_text.text}</p>
+                </div>
               </div>
-            </div>
-            <div className="col-4">
-              <div className="card p-4">
-                <h2 className="text-black font-weight-500">Intégration</h2>
-                <p className="text-black-secondary">
-                  Lorem ipsum de la super class stylé :D Lorem ipsum de la super
-                  class stylé :D
-                </p>
-              </div>
-            </div>
-            <div className="col-4">
-              <div className="card p-4">
-                <h2 className="text-black font-weight-500">Support</h2>
-                <p className="text-black-secondary">
-                  Lorem ipsum de la super class stylé :D Lorem ipsum de la super
-                  class stylé :D
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
       </div>
       <div className="container-fluid" style={{ backgroundColor: "#202020" }}>
         <section className="container d-flex flex-column align-items-center justify-content-center">
-          <h2 className="mb-4 font-weight-600">Nos Pilliers</h2>
+          <h2 className="mb-4 font-weight-600">{data.pillar_title.text}</h2>
           <div className="row">
-            <div className="col-4">
-              <div className="card p-4 justify-content-start">
-                <img src={Moderniser} />
-                <h2 className="text-black mt-3">Moderniser</h2>
-                <p className="text-black-secondary">
-                  Lorem ipsum de la super class stylé :D Lorem ipsum de la super
-                  class stylé :D
-                </p>
-                <a className="align-self-end text-black-secondary font-weight-600">
-                  Voir plus <img src={Arrow} className="btn-arrow" />
-                </a>
+            {data.pillar_group.map(p => (
+              <div className="col-md-4 col-sm-6">
+                <div className="card p-4 justify-content-start">
+                  <img src={p.pillar_icon.url} alt={p.pillar_icon.alt} />
+                  <h2 className="text-black mt-3">{p.pillar_title1.text}</h2>
+                  <p className="text-black-secondary">{p.pillar_text.text}</p>
+                  <a className="align-self-end text-black-secondary font-weight-600">
+                    Voir plus <img src={Arrow} className="btn-arrow" />
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="col-4">
-              <div className="card p-4 justify-content-start">
-                <img src={Simplify} />
-                <h2 className="text-black mt-3">Simplifier</h2>
-                <p className="text-black-secondary">
-                  Lorem ipsum de la super class stylé :D Lorem ipsum de la super
-                  class stylé :D
-                </p>
-                <a className="align-self-end text-black-secondary font-weight-600">
-                  Voir plus <img src={Arrow} className="btn-arrow" />
-                </a>
-              </div>
-            </div>
-            <div className="col-4">
-              <div className="card p-4 justify-content-start">
-                <img src={Secure} />
-                <h2 className="text-black mt-3">Sécuriser</h2>
-                <p className="text-black-secondary">
-                  Lorem ipsum de la super class stylé :D Lorem ipsum de la super
-                  class stylé :D
-                </p>
-                <a className="align-self-end text-black-secondary font-weight-600">
-                  Voir plus <img src={Arrow} className="btn-arrow" />
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
       </div>
-      {/* <section className="container">
-        {console.log(data)}
 
-        {edges.map(c => (
-          <GridItem
-            uid={c.node.uid}
-            key={c.node.uid}
-            image={c.node.data.header_image.localFile.childImageSharp.fluid}
-            alt={c.node.data.title.text}
-            title={c.node.data.title.text}
-            subtitle={c.node.data.subtitle.text}
-          />
-        ))}
-      </section> */}
       <section className="container d-flex flex-column align-items-center justify-content-center">
         <h2 className="mb-4 font-weight-600">Témoignages</h2>
         <div className="row justify-content-center">
@@ -205,10 +142,56 @@ export const pageQuery = graphql`
     homePage: prismicHomepage {
       id
       data {
+        body {
+          id
+          slice_type
+          primary {
+            quote {
+              text
+            }
+            portrait_author {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
+                }
+              }
+            }
+            name_of_the_author {
+              text
+            }
+          }
+        }
+        title {
+          text
+        }
+        pillar_title {
+          text
+        }
+        pillar_group {
+          pillar_icon {
+            url
+          }
+          pillar_text {
+            text
+          }
+          pillar_title1 {
+            text
+          }
+        }
         page_subtitle {
           text
         }
-        title {
+        missions {
+          mission_text {
+            text
+          }
+          mission_title1 {
+            text
+          }
+        }
+        mission_title {
           text
         }
       }
