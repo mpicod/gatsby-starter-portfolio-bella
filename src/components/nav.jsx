@@ -3,6 +3,19 @@ import { Link, StaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import Logo from "../images/logo_zenops.svg";
 
+const SimpleLink = props => (
+  <li className="nav-item active">
+    <a
+      className="nav-link"
+      // {...(l.primary.link ? { href: l.primary.link.url } : {})}
+      {...(props.link.primary.link && { href: props.link.primary.link.url })}
+    >
+      {console.log(props, "link")}
+      {props.link.primary.label.text}A
+    </a>
+  </li>
+);
+
 const Nav = () => {
   return (
     <StaticQuery
@@ -36,7 +49,7 @@ const Nav = () => {
         <div className="container">
           <nav className="navbar navbar-expand-lg">
             {console.log(data)}
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               <img src={Logo} />
             </a>
             <button
@@ -52,20 +65,47 @@ const Nav = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
-                {data.prismicLayout.data.nav.map(l => (
-                  <li className="nav-item active">
-                    {console.log(l.primary.link, "primary link")}
-                    <a
-                      className="nav-link"
-                      // {...(l.primary.link ? { href: l.primary.link.url } : {})}
-                      {...(l.primary.link && { href: l.primary.link.url })}
-                    >
-                      {console.log(l)}
-                      {l.primary.label.text}
-                    </a>
-                  </li>
-                ))}
-                <li className="nav-item active">
+                {data.prismicLayout.data.nav.map(l => {
+                  return l.primary.link ? (
+                    <li className="nav-item active">
+                      <a
+                        className="nav-link"
+                        // {...(l.primary.link ? { href: l.primary.link.url } : {})}
+                        href={l.primary.link.url}
+                        // {...(l.primary.link && { href: l.primary.link.url })}
+                      >
+                        {l.primary.label.text}
+                      </a>
+                    </li>
+                  ) : (
+                    <li className="nav-item dropdown text-white">
+                      <a
+                        className="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        {l.primary.label.text}
+                      </a>
+                      <div
+                        className="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        {l.items.map(i => (
+                          <a
+                            className="dropdown-item"
+                            href={i.sub_nav_link.url}
+                          >
+                            {i.sub_nav_link_label.text}
+                          </a>
+                        ))}
+                      </div>
+                    </li>
+                  );
+                })}
+                {/* <li className="nav-item active">
                   <a className="nav-link" href="/">
                     À propos
                   </a>
@@ -101,7 +141,7 @@ const Nav = () => {
                   <a className="nav-link" href="#">
                     Métiers
                   </a>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <a className="nav-link" href="#">
                     <button

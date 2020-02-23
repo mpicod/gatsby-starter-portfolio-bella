@@ -18,6 +18,7 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
       <header className="container d-flex flex-column align-items-center justify-content-center ">
         <h1 className="text-primary font-weight-600">{data.title.text}</h1>
         <p className="lead text-white">{data.pillar_description.text}</p>
+        {console.log(data, "pillar desc")}
         <button className="btn btn-primary" type="button" value="Input">
           Contactez-nous !
         </button>
@@ -51,7 +52,9 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
         {data.features.map(f => (
           <div className="row featured-bloc my-4">
             <div className="col-md-6 col-sm-12">
-              <Img fluid={f.feature_image.localFile.childImageSharp.fluid} />
+              {f.feature_image.localFile && (
+                <Img fluid={f.feature_image.localFile.childImageSharp.fluid} />
+              )}
             </div>
             <div className="col-md-6 col-sm-12 content">
               <small className="text-primary text-uppercase">
