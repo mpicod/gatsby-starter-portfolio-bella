@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Team from "../images/Team.jpg";
+import Team from "../images/team.jpg";
 
 export default class Mission extends Component {
   render() {
