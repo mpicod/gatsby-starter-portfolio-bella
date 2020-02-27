@@ -4,10 +4,10 @@ import Img from "gatsby-image";
 export default class Feature extends Component {
   render() {
     return (
-      <div class="relative bg-white">
-        <div class="h-56 bg-primary-600 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2 overflow-hidden">
+      <div className="relative bg-white">
+        <div className="h-56 bg-primary-600 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2 overflow-hidden">
           {/* <img
-            class="w-full h-full object-cover"
+            className="w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
             alt="Support team"
           /> */}
@@ -15,12 +15,12 @@ export default class Feature extends Component {
             <Img fluid={this.props.img.localFile.childImageSharp.fluid} />
           )}
         </div>
-        <div class="relative max-w-screen-xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
-          <div class="max-w-2xl mx-auto lg:max-w-none lg:mr-0 lg:ml-auto lg:w-1/2 lg:pl-10">
+        <div className="relative max-w-screen-xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
+          <div className="max-w-2xl mx-auto lg:max-w-none lg:mr-0 lg:ml-auto lg:w-1/2 lg:pl-10">
             <div>
-              <div class="flex items-center font-bold rounded-md text-primary-900">
+              <div className="flex items-center font-bold rounded-md text-primary-900">
                 {/* <svg
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   stroke="currentColor"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -35,35 +35,35 @@ export default class Feature extends Component {
                 {this.props.label}
               </div>
             </div>
-            <h2 class="mt-6 text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+            <h2 className="mt-6 text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
               {this.props.title}
             </h2>
-            <p class="mt-6 text-lg leading-7 text-gray-500">
+            <p className="mt-6 text-lg leading-7 text-gray-500">
               {this.props.desc}
             </p>
-            {/* <div class="mt-8 overflow-hidden">
-              <div class="-mx-8 -mt-8 flex flex-wrap">
-                <div class="px-8 pt-8">
-                  <p class="text-2xl leading-8 font-extrabold text-primary-600 sm:text-3xl sm:leading-9">
+            {/* <div className="mt-8 overflow-hidden">
+              <div className="-mx-8 -mt-8 flex flex-wrap">
+                <div className="px-8 pt-8">
+                  <p className="text-2xl leading-8 font-extrabold text-primary-600 sm:text-3xl sm:leading-9">
                     24/7
                   </p>
-                  <p class="text-base leading-6 font-medium text-gray-500">
+                  <p className="text-base leading-6 font-medium text-gray-500">
                     Delivery
                   </p>
                 </div>
-                <div class="px-8 pt-8">
-                  <p class="text-2xl leading-8 font-extrabold text-primary-600 sm:text-3xl sm:leading-9">
+                <div className="px-8 pt-8">
+                  <p className="text-2xl leading-8 font-extrabold text-primary-600 sm:text-3xl sm:leading-9">
                     99.9%
                   </p>
-                  <p class="text-base leading-6 font-medium text-gray-500">
+                  <p className="text-base leading-6 font-medium text-gray-500">
                     Pepperoni
                   </p>
                 </div>
-                <div class="px-8 pt-8">
-                  <p class="text-2xl leading-8 font-extrabold text-primary-600 sm:text-3xl sm:leading-9">
+                <div className="px-8 pt-8">
+                  <p className="text-2xl leading-8 font-extrabold text-primary-600 sm:text-3xl sm:leading-9">
                     100k+
                   </p>
-                  <p class="text-base leading-6 font-medium text-gray-500">
+                  <p className="text-base leading-6 font-medium text-gray-500">
                     Calories
                   </p>
                 </div>

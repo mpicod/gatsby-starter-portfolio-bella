@@ -29,7 +29,8 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
     <Layout>
       <Nav></Nav>
       <Hero title={data.title.text} description={data.page_subtitle.text} />
-      <Carousel></Carousel>
+
+      <Carousel data={data.body[1]}></Carousel>
       {/* <header className="container d-flex home">
         <div className="row w-100">
           <div className="col-md-6 col-sm-12">
@@ -161,24 +162,49 @@ export const pageQuery = graphql`
       id
       data {
         body {
-          id
-          slice_type
-          primary {
-            quote {
-              text
-            }
-            portrait_author {
-              localFile {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid_tracedSVG
+          ... on PrismicHomepageBodyCarousel {
+            primary {
+              featured_image {
+                localFile {
+                  childImageSharp {
+                    fluid(
+                      maxWidth: 900
+                      maxHeight: 900
+                      quality: 90
+                      traceSVG: { color: "#021212" }
+                      cropFocus: ENTROPY
+                    ) {
+                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    }
                   }
                 }
               }
             }
-            name_of_the_author {
-              text
+            items {
+              carousel_title {
+                text
+              }
+              carousel_description {
+                text
+              }
             }
+            slice_type
+          }
+          ... on PrismicHomepageBodyQuote {
+            primary {
+              quote {
+                text
+              }
+              portrait_author {
+                localFile {
+                  id
+                }
+              }
+              name_of_the_author {
+                text
+              }
+            }
+            slice_type
           }
         }
         title {

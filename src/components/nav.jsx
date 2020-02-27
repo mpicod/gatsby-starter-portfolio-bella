@@ -167,7 +167,7 @@ const Nav = () => {
               <img src={Logo} />
             </div>
           </div>
-          <div class="relative pt-6 pb-16 md:pb-20 lg:pb-24 xl:pb-32">
+          <div class="relative pt-6 pb-16 md:pb-16 lg:pb-20 xl:pb-24">
             <nav class="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6">
               <div class="flex items-center flex-1">
                 <div class="flex items-center justify-between w-full md:w-auto">
