@@ -106,7 +106,7 @@ export default class SimpleSlider extends React.Component {
               {this.props.data.items.map(i => (
                 <div>
                   <div className="p-12 md:pr-24 md:pl-16 md:py-12">
-                    <h2 className="mt-2 text-3xl leading-9 font-old tracking-tight sm:text-3xl sm:leading-10">
+                    <h2 className="mt-2 text-2xl leading-9 font-bold tracking-tight sm:text-2xl">
                       {i.carousel_title.text}
                     </h2>
                     <p className="text-gray-600">

@@ -119,13 +119,18 @@ const SEO = props => {
         href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet"
       />
-      <script>
+      {/* <script>
         {`        window.prismic =
         {
           endpoint: "https://demo-bella.cdn.prismic.io/api/v2"
         }
         ;`}
-      </script>
+      </script> */}
+      <script
+        async
+        defer
+        src="//static.cdn.prismic.io/prismic.js?repo=demo-bella&new=true"
+      ></script>
       <script
         type="text/javascript"
         src="https://static.cdn.prismic.io/prismic.min.js?new=true"

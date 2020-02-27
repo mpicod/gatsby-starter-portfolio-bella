@@ -232,6 +232,9 @@ export const pageQuery = graphql`
           pillar_text {
             text
           }
+          pillar_cta {
+            url
+          }
           pillar_title1 {
             text
           }

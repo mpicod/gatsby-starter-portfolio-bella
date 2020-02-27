@@ -23,3 +23,7 @@ body {
 
 .btn-arrow {
 }
+
+.features:nth-child(odd) {
+  flex-direction: row-reverse;
+}

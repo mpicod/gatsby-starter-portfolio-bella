@@ -24,8 +24,8 @@ export default class Pillars extends Component {
             {this.props.pillars.map(p => (
               <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 text-white p-8 mt-5 m-auto">
                 <div class="flex items-center justify-center h-12 w-12 rounded-md text-white mx-6 my-4 ">
-                  {/* <img src={p.pillar_icon.url} alt={p.pillar_icon.alt} /> */}
-                  <img src={Moderniser} alt={p.pillar_icon.alt} />
+                  <img src={p.pillar_icon.url} alt={p.pillar_icon.alt} />
+                  {/* <img src={Moderniser} alt={p.pillar_icon.alt} /> */}
                 </div>
                 <div class="px-6 py-4 flex flex-col">
                   <h5 class="text-xl leading-6 font-bold font-medium text-white">
@@ -36,7 +36,7 @@ export default class Pillars extends Component {
                   </p>
                   <a
                     className="self-end text-sm text-primary-900 flex text-bold mt-3"
-                    href="/"
+                    href={p.pillar_cta.url}
                   >
                     Voir plus <img src={Arrow} className="btn-arrow ml-2" />
                   </a>
