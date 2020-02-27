@@ -4,10 +4,10 @@ import Map from "../images/map.png";
 export default class ContactBanner extends Component {
   render() {
     return (
-      <div className="relative bg-gray-800">
-        <div className="h-56 bg-primary-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+      <div className="relative bg-gray-900">
+        <div className="h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
           <img
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover p-16"
             src={Map}
             alt="Support team"
           />
@@ -42,7 +42,7 @@ export default class ContactBanner extends Component {
               />
               <div className="my-3 mt-3 rounded-md shadow sm:flex-shrink-0">
                 <button className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out sm:max-w-xs">
-                  Notify me
+                  Envoyer le message
                 </button>
               </div>
             </form>

@@ -10,6 +10,7 @@ import ContactBanner from "../components/ContactBanner";
 import Carousel from "../components/Carousel";
 import Pillars from "../components/Pillars";
 import Hero from "../components/Hero";
+import Mission from "../components/Mission";
 
 import Moderniser from "../images/moderniser.svg";
 import Simplify from "../images/simplify.svg";
@@ -29,7 +30,6 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
     <Layout>
       <Nav></Nav>
       <Hero title={data.title.text} description={data.page_subtitle.text} />
-
       <Carousel data={data.body[1]}></Carousel>
       {/* <header className="container d-flex home">
         <div className="row w-100">
@@ -46,7 +46,7 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
         </div>
       </header> */}
 
-      <div className="container-fluid bg-black team-section">
+      {/* <div className="container-fluid bg-black team-section">
         <section className="container d-flex flex-column align-items-center justify-content-center ">
           <h2 className="mb-4 font-weight-600">{data.mission_title.text}</h2>
           <div className="row">
@@ -62,7 +62,8 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
             ))}
           </div>
         </section>
-      </div>
+      </div> */}
+      <Mission title={data.mission_title} data={data.missions} />
       <Pillars pillars={data.pillar_group} title={data.pillar_title.text} />
       {/* <div className="container-fluid" style={{ backgroundColor: "#202020" }}>
         <section className="container d-flex flex-column align-items-center justify-content-center">
@@ -101,7 +102,9 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
         </div>
       </section> */}
       <Testimonial
-        Quote={"Quote"}
+        Quote={
+          "ZenOps360 est une équipe vraiment top ! Nous avons ré-achitecturé toute l'infrastructure de notre base de donnée sensible, sans aucun problème et en un temps record grace à eux !"
+        }
         Name={"Jean-Yves"}
         Job={"CEO of MyCompany"}
         Logo={Testimony}
@@ -197,7 +200,17 @@ export const pageQuery = graphql`
               }
               portrait_author {
                 localFile {
-                  id
+                  childImageSharp {
+                    fluid(
+                      maxWidth: 900
+                      maxHeight: 900
+                      quality: 90
+                      traceSVG: { color: "#021212" }
+                      cropFocus: ENTROPY
+                    ) {
+                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    }
+                  }
                 }
               }
               name_of_the_author {
