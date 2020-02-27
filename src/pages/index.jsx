@@ -162,7 +162,6 @@ export const pageQuery = graphql`
       }
     }
     homePage: prismicHomepage {
-      id
       data {
         body {
           ... on PrismicHomepageBodyCarousel {
