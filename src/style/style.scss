@@ -3,3 +3,20 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+body {
+  font-family: "Raleway";
+}
+
+.absolute-pattern {
+  top: 10vh;
+  z-index: -1;
+}
+
+// * {
+//   outline: 2px red solid;
+// }

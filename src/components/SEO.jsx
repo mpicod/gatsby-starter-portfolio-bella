@@ -115,6 +115,10 @@ const SEO = props => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <link
+        href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet"
+      />
       <script>
         {`        window.prismic =
         {
@@ -126,6 +130,17 @@ const SEO = props => {
         type="text/javascript"
         src="https://static.cdn.prismic.io/prismic.min.js?new=true"
       ></script>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charset="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
     </Helmet>
   );
 };

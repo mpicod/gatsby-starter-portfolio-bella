@@ -1,139 +1,139 @@
-// Custom color always set before importing other fils. These will override default value
-$theme-colors: (
-  "primary": #22da11,
-  "secondary": #ebf0ff,
-  "pink": #ff2e8d,
-  "pink-secondary": #ffbbda,
-  "pink-tertiary": #fff6fa,
-  "tertiary": #d5d4ff,
-  "tertiary-2": #eaeaff,
-  "danger": #ff4136,
-  "muted": #dadbdb,
-  "black": #020d01,
-  "black-secondary": #454545,
-  "black-tertiary": #8798ad,
-  "gray": #bfc5d2,
-  "gray-secondary": #f4f6fc,
-  "gray-tertiary": #eef3f5,
-  "green": #67d563
-);
+// // Custom color always set before importing other fils. These will override default value
+// $theme-colors: (
+//   "primary": #22da11,
+//   "secondary": #ebf0ff,
+//   "pink": #ff2e8d,
+//   "pink-secondary": #ffbbda,
+//   "pink-tertiary": #fff6fa,
+//   "tertiary": #d5d4ff,
+//   "tertiary-2": #eaeaff,
+//   "danger": #ff4136,
+//   "muted": #dadbdb,
+//   "black": #020d01,
+//   "black-secondary": #454545,
+//   "black-tertiary": #8798ad,
+//   "gray": #bfc5d2,
+//   "gray-secondary": #f4f6fc,
+//   "gray-tertiary": #eef3f5,
+//   "green": #67d563
+// );
 
-// Have to import functions and mixins to prevent errors in variables mixins (in _variables.scss)
-// @import "_functions.scss";
-// @import "_mixins";
-// @import "_override_mixins";
-@import "_variables.scss";
+// // Have to import functions and mixins to prevent errors in variables mixins (in _variables.scss)
+// // @import "_functions.scss";
+// // @import "_mixins";
+// // @import "_override_mixins";
+// @import "_variables.scss";
 
-// Then import bootstrap
-@import "../../node_modules/bootstrap/scss/bootstrap";
+// // Then import bootstrap
+// @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Components override (from bootstrap)
-// @import "_buttons.scss";
-// @import "_forms.scss";
-// @import "_input-group.scss";
-// @import "_tables.scss";
-// @import "_popover.scss";
-// @import "card.scss";
-// @import "_modal.scss";
-@import "_types.scss";
-// @import "_tooltip.scss";
+// // Components override (from bootstrap)
+// // @import "_buttons.scss";
+// // @import "_forms.scss";
+// // @import "_input-group.scss";
+// // @import "_tables.scss";
+// // @import "_popover.scss";
+// // @import "card.scss";
+// // @import "_modal.scss";
+// @import "_types.scss";
+// // @import "_tooltip.scss";
 
-body {
-  font-family: $font-family-sans-serif;
-  background-color: theme-color("black");
-}
+// body {
+//   font-family: $font-family-sans-serif;
+//   background-color: theme-color("black");
+// }
 
-header {
-  &.home {
-    height: 100vh;
-  }
-  min-height: 50vh;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
+// header {
+//   &.home {
+//     height: 100vh;
+//   }
+//   min-height: 50vh;
+//   display: flex;
+//   justify-content: start;
+//   align-items: center;
+// }
 
-h2 {
-  font-weight: 600;
-}
-section {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// h2 {
+//   font-weight: 600;
+// }
+// section {
+//   min-height: 70vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-.navbar-brand {
-  width: 50px;
-}
+// .navbar-brand {
+//   width: 50px;
+// }
 
-.navbar-nav {
-  align-items: center;
-}
-.navbar-collapse {
-  justify-content: end;
-}
+// .navbar-nav {
+//   align-items: center;
+// }
+// .navbar-collapse {
+//   justify-content: end;
+// }
 
-.nav-link {
-  color: white;
-}
+// .nav-link {
+//   color: white;
+// }
 
-.testimony-img {
-  border-radius: 50%;
-  width: 80px;
-}
+// .testimony-img {
+//   border-radius: 50%;
+//   width: 80px;
+// }
 
-ul {
-  margin: unset;
-}
+// ul {
+//   margin: unset;
+// }
 
-.team-section {
-  min-height: 80vh;
-  background-image: url(../images/team.jpg);
-  background-position: bottom;
-  background-size: cover;
-}
+// .team-section {
+//   min-height: 80vh;
+//   background-image: url(../images/team.jpg);
+//   background-position: bottom;
+//   background-size: cover;
+// }
 
-a:hover .btn-arrow {
-  transform: translateX(10px);
-  transition: 0.3s all ease-in-out;
-}
+// a:hover .btn-arrow {
+//   transform: translateX(10px);
+//   transition: 0.3s all ease-in-out;
+// }
 
-a .btn-arrow {
-  transition: 0.3s all ease-in-out;
-}
+// a .btn-arrow {
+//   transition: 0.3s all ease-in-out;
+// }
 
-a {
-  cursor: pointer;
-}
+// a {
+//   cursor: pointer;
+// }
 
-.trend-number {
-  font-weight: 600;
-  font-size: 3rem;
-  color: theme-color("primary");
-}
+// .trend-number {
+//   font-weight: 600;
+//   font-size: 3rem;
+//   color: theme-color("primary");
+// }
 
-.featured-bloc:nth-child(even) {
-  flex-direction: row-reverse;
-}
-.featured-bloc {
-  width: 100%;
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
+// .featured-bloc:nth-child(even) {
+//   flex-direction: row-reverse;
+// }
+// .featured-bloc {
+//   width: 100%;
+//   .content {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+// }
 
-.featured-partners {
-  display: flex;
-  img {
-    margin: 0.5em;
-  }
-}
+// .featured-partners {
+//   display: flex;
+//   img {
+//     margin: 0.5em;
+//   }
+// }
 
-.dropdown:hover {
-  .dropdown-menu {
-    display: block;
-  }
-}
+// .dropdown:hover {
+//   .dropdown-menu {
+//     display: block;
+//   }
+// }

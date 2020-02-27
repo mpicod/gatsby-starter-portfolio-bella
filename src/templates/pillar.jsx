@@ -2,12 +2,24 @@ import React from "react";
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 import Nav from "../components/nav";
+import Stats from "../components/Stats";
 import Background from "../images/background.png";
 import Saltstack from "../images/ss.svg";
 import PartnersBanner from "../components/PartnersBanner";
+import Hero from "../components/Hero";
+import Logos from "../components/Logos";
+import Feature from "../components/Feature";
+import Video from "../components/Video";
+
 import "../style/custom.scss";
 import Secure from "../images/secure.svg";
 import Img from "gatsby-image";
+
+const items = [
+  { stat_number: "63%", stat_desc: "Description" },
+  { stat_number: "18%", stat_desc: "Text:" },
+  { stat_number: "93%", stat_desc: "Text" }
+];
 
 const PillarPage = ({ data: { prismicPillarpage } }) => {
   // const { edges } = PillarQuery;
@@ -15,39 +27,27 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
   return (
     <Layout>
       <Nav></Nav>
-      <header className="container d-flex flex-column align-items-center justify-content-center ">
+      {/* <header className="container d-flex flex-column align-items-center justify-content-center ">
         <h1 className="text-primary font-weight-600">{data.title.text}</h1>
         <p className="lead text-white">{data.pillar_description.text}</p>
-        {console.log(data, "pillar desc")}
         <button className="btn btn-primary" type="button" value="Input">
           Contactez-nous !
         </button>
-      </header>
-      <section className="container d-flex flex-column align-items-center justify-content-center ">
-        <h2 className="mb-4">Tendances</h2>
-        <div className="row">
-          <div className="col-md-4 col-sm-6">
-            <div className="p-4 card">
-              <p className="trend-number">58%</p>
-              <p className="">Text trop cool :D</p>
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="p-4 card">
-              <p className="trend-number">58%</p>
-              <p className="">Text trop cool :D</p>
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6">
-            <div className="p-4 card">
-              <p className="trend-number">58%</p>
-              <p className="">Text trop cool :D</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </header> */}
+      <Hero
+        title={data.title.text}
+        description={data.pillar_description.text}
+        icon={data.pillar_icon}
+      />
+      <Stats
+        title={"Les tendances du marché"}
+        description={
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Repellendus repellat laudantium."
+        }
+        items={items}
+      />
 
-      <section className="container d-flex flex-column align-items-center justify-content-center ">
+      {/* <section className="container d-flex flex-column align-items-center justify-content-center ">
         <h2>{data.features_title.text}</h2>
         {data.features.map(f => (
           <div className="row featured-bloc my-4">
@@ -73,19 +73,17 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
             </div>
           </div>
         ))}
-      </section>
-      <section className="container d-flex flex-column align-items-center justify-content-center mt-4">
-        <h2>Le mot de l'expert</h2>
-        <iframe
-          title="vimeo-player"
-          src="https://player.vimeo.com/video/386424847"
-          width="640"
-          height="360"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-      </section>
-      <PartnersBanner />
+      </section> */}
+      {data.features.map(f => (
+        <Feature
+          title={f.feature_title.text}
+          desc={f.feature_description.text}
+          img={f.feature_image}
+        />
+      ))}
+
+      <Video></Video>
+      <Logos></Logos>
       <Footer />
     </Layout>
   );
