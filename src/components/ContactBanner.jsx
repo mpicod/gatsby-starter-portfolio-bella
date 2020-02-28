@@ -25,7 +25,11 @@ export default class ContactBanner extends Component {
               répondre à vos demandes ! N'hésitez pas à nous laisser un message
               et nous reviendrons vers vous rapidement.
             </p>
-            <form className="mt-8 sm:flex flex-col">
+            <form
+              className="mt-8 sm:flex flex-col"
+              method="post"
+              action="https://gatsby-starter-portfolio-bella.now.sh/sendMail"
+            >
               <input
                 aria-label="Email address"
                 type="email"
