@@ -5,6 +5,7 @@
   "author": "LekoArts <hello@lekoarts.de>",
   "dependencies": {
     "@tailwindcss/ui": "^0.1.2",
+    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
