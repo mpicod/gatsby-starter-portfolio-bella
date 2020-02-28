@@ -11,7 +11,7 @@ export default () => {
     email: "",
     message: ""
   });
-  const handleServerResponse = (success, msg) => {
+  const handleServerResponse = (success, message) => {
     if (success) {
       setStatus({
         submitted: true,
@@ -46,14 +46,17 @@ export default () => {
     axios({
       method: "POST",
       url: "https://gatsby-starter-portfolio-bella.now.sh/api/sendMail",
-      data: inputs
+      data: inputs,
+      headers: {
+        "Content-Type": "application/json"
+      }
     })
       .then(response => {
         console.log("response", response);
-        handleServerResponse(
-          true,
-          "Thank you, your message has been submitted."
-        );
+        // handleServerResponse(
+        //   true,
+        //   "Thank you, your message has been submitted."
+        // );
       })
       .catch(error => {
         console.log(error, "ERROR");
