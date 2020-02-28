@@ -71,14 +71,16 @@ module.exports = (req, res) => {
     from: "mktg.zenops360@gmail.com",
     to: "mktg.zenops360@gmail.com",
     subject: "ZenOps 360 Contact ",
-    text: ""
+    text: req.body.message || "[No message]"
   };
 
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
       console.log(error);
+      return res.status(500).send(err);
     } else {
       console.log("Email sent: " + info.response);
+      res.json({ success: true });
     }
   });
 };
