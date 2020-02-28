@@ -36,7 +36,7 @@ const mailer = nodemailer.createTransport({
     pass: "@0!gOb@FqO62YA"
   }
 });
-app.post("/contact", function(req, res) {
+app.post("/", function(req, res) {
   mailer.sendMail(
     {
       from: req.body.from || "mktg.zenops360@gmail.com",
