@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Testimonial from "../components/Testimonial";
 import Logos from "../components/Logos";
 import ContactBanner from "../components/ContactBanner";
+import ContactForm from "../components/ContactForm";
 import Carousel from "../components/Carousel";
 import Pillars from "../components/Pillars";
 import Hero from "../components/Hero";
@@ -111,6 +112,7 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
       />
 
       <ContactBanner />
+      <ContactForm />
       <Logos></Logos>
       <Footer />
     </Layout>

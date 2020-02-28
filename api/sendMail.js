@@ -56,7 +56,7 @@
 // import { NowRequest, NowResponse } from "@now/node";
 
 module.exports = (req, res) => {
-  console.log(req, "REQ)");
+  console.log(req.body, "REQ)");
   const nodemailer = require("nodemailer");
 
   const transporter = nodemailer.createTransport({
@@ -71,7 +71,7 @@ module.exports = (req, res) => {
     from: "mktg.zenops360@gmail.com",
     to: "mktg.zenops360@gmail.com",
     subject: "ZenOps 360 Contact ",
-    text: req.body.message || "[No message]"
+    text: req.body.data.message || "[No message]"
   };
 
   transporter.sendMail(mailOptions, function(error, info) {
