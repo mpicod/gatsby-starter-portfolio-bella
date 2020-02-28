@@ -4,7 +4,7 @@ var nodemailer = require("nodemailer");
 
 router.post("/", handleSendEmail); // handle the route at yourdomain.com/sayHello
 
-function handleSendEmail(req, res) {
+module.exports = (req, res) => {
   // Not the movie transporter!
   var transporter = nodemailer.createTransport({
     service: "Gmail",
@@ -41,7 +41,7 @@ function handleSendEmail(req, res) {
       res.json({ yo: info.response });
     }
   });
-}
+};
 
 module.exports = router;
 
