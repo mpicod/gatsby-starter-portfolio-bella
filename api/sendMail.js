@@ -71,8 +71,8 @@ module.exports = (req, res) => {
   const mailOptions = {
     from: "mktg.zenops360@gmail.com",
     to: "mktg.zenops360@gmail.com",
-    subject: "ZenOps 360 Contact "
-    // text: data.message || "[No message]"
+    subject: "ZenOps 360 Contact ",
+    text: data.message || "[No message]"
   };
 
   transporter.sendMail(mailOptions, function(error, info) {
@@ -81,7 +81,7 @@ module.exports = (req, res) => {
       return res.status(500).send(err);
     } else {
       console.log("Email sent: " + info.response);
-      res.send({ Status_Code: 0 });
+      res.json({ success: true });
     }
   });
 };
