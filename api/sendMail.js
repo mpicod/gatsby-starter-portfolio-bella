@@ -1,49 +1,57 @@
-var express = require("express");
-var router = express.Router();
-var nodemailer = require("nodemailer");
-
-router.post("/", handleSendEmail); // handle the route at yourdomain.com/sayHello
-
 module.exports = (req, res) => {
-  // Not the movie transporter!
-  var transporter = nodemailer.createTransport({
-    service: "Gmail",
-    auth: {
-      user: "mktg.zenops360@gmail.com", // Your email id
-      pass: "@0!gOb@FqO62YA" // Your password
-    }
-  });
-  var text = "Hello from \n\n" + req.body.user_name;
-  var mailOptions = {
-    from: "sender@gmail.com", // sender address
-    to: "receiver@gmail.com", // list of receivers
-    subject: "Appointment Email Example", // Subject line
-    text: text,
-    html:
-      "<!DOCTYPE html>" +
-      "<html><head><title>Appointment</title>" +
-      "</head><body><div>" +
-      '<img src="http://evokebeautysalon1.herokuapp.com/main/img/logo.png" alt="" width="160">' +
-      "<p>Thank you for your appointment.</p>" +
-      "<p>Here is summery:</p>" +
-      "<p>Name: James Falcon</p>" +
-      "<p>Date: Feb 2, 2017</p>" +
-      "<p>Package: Hair Cut </p>" +
-      "<p>Arrival time: 4:30 PM</p>" +
-      "</div></body></html>"
-  };
-  transporter.sendMail(mailOptions, function(error, info) {
-    if (error) {
-      console.log(error);
-      res.json({ yo: "error" });
-    } else {
-      console.log("Message sent: " + info.response);
-      res.json({ yo: info.response });
-    }
+  res.json({
+    body: "coucou",
+    query: "req.query"
+    // cookies: req.cookies
   });
 };
 
-module.exports = router;
+// var express = require("express");
+// var router = express.Router();
+// var nodemailer = require("nodemailer");
+
+// router.post("/", handleSendEmail); // handle the route at yourdomain.com/sayHello
+
+// module.exports = (req, res) => {
+//   // Not the movie transporter!
+//   var transporter = nodemailer.createTransport({
+//     service: "Gmail",
+//     auth: {
+//       user: "mktg.zenops360@gmail.com", // Your email id
+//       pass: "@0!gOb@FqO62YA" // Your password
+//     }
+//   });
+//   var text = "Hello from \n\n" + req.body.user_name;
+//   var mailOptions = {
+//     from: "sender@gmail.com", // sender address
+//     to: "receiver@gmail.com", // list of receivers
+//     subject: "Appointment Email Example", // Subject line
+//     text: text,
+//     html:
+//       "<!DOCTYPE html>" +
+//       "<html><head><title>Appointment</title>" +
+//       "</head><body><div>" +
+//       '<img src="http://evokebeautysalon1.herokuapp.com/main/img/logo.png" alt="" width="160">' +
+//       "<p>Thank you for your appointment.</p>" +
+//       "<p>Here is summery:</p>" +
+//       "<p>Name: James Falcon</p>" +
+//       "<p>Date: Feb 2, 2017</p>" +
+//       "<p>Package: Hair Cut </p>" +
+//       "<p>Arrival time: 4:30 PM</p>" +
+//       "</div></body></html>"
+//   };
+//   transporter.sendMail(mailOptions, function(error, info) {
+//     if (error) {
+//       console.log(error);
+//       res.json({ yo: "error" });
+//     } else {
+//       console.log("Message sent: " + info.response);
+//       res.json({ yo: info.response });
+//     }
+//   });
+// };
+
+// module.exports = router;
 
 // import { NowRequest, NowResponse } from "@now/node";
 
