@@ -43,13 +43,12 @@ export default () => {
   const handleOnSubmit = e => {
     e.preventDefault();
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
+    console.log("inputs", inputs);
     axios({
       method: "POST",
       url: "https://gatsby-starter-portfolio-bella.now.sh/api/sendMail",
       data: inputs,
-      headers: {
-        "Content-Type": "application/json"
-      }
+      headers: {}
     })
       .then(response => {
         console.log("response", response);
