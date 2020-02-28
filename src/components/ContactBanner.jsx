@@ -28,7 +28,7 @@ export default class ContactBanner extends Component {
             <form
               className="mt-8 sm:flex flex-col"
               method="POST"
-              action="https://gatsby-starter-portfolio-bella.now.sh"
+              action="https://gatsby-starter-portfolio-bella.now.sh/api/sendMail"
               // onSubmit=handle()
             >
               <input
