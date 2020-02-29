@@ -74,7 +74,7 @@ module.exports = (req, res) => {
     subject: "ZenOps 360 Contact ",
     text: req.body.message || "[No message]"
   };
-
+  console.log(req.body.email, req.body.message, "DATAMAGGLE)");
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
       console.log(error);
