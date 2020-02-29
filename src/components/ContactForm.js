@@ -114,7 +114,7 @@ export default () => {
                   !status.submitted ? (
                     "Envoyer le message!"
                   ) : (
-                    <img src={Check} />
+                    <img src={Check} className="sent-check" />
                   )
                 ) : (
                   "Envoi en cours..."

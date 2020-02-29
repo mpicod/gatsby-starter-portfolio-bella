@@ -27,3 +27,8 @@ body {
 .features:nth-child(odd) {
   flex-direction: row-reverse;
 }
+
+.sent-check {
+  width: 40px;
+  color: white;
+}
