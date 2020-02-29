@@ -110,11 +110,15 @@ export default () => {
                 disabled={status.submitting}
                 className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out sm:max-w-xs"
               >
-                {!status.submitting
-                  ? !status.submitted
-                    ? "Envoyer le message!"
-                    : `Envoyé!  <img src=${Check} />`
-                  : "Envoi en cours..."}
+                {!status.submitting ? (
+                  !status.submitted ? (
+                    "Envoyer le message!"
+                  ) : (
+                    <img src={Check} />
+                  )
+                ) : (
+                  "Envoi en cours..."
+                )}
               </button>
               {status.info.error && (
                 <div className="error">Error: {status.info.message}</div>
