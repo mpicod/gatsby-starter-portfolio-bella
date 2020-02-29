@@ -113,7 +113,7 @@ export default () => {
                 {!status.submitting
                   ? !status.submitted
                     ? "Envoyer le message!"
-                    : "Envoyé!" + <img src={Check} />
+                    : `Envoyé!  <img src=${Check} />`
                   : "Envoi en cours..."}
               </button>
               {status.info.error && (
