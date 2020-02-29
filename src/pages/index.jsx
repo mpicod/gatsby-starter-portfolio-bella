@@ -112,7 +112,7 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
       />
 
       <ContactBanner />
-      {/* <ContactForm /> */}
+      <ContactForm />
       <Logos></Logos>
       <Footer />
     </Layout>

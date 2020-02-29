@@ -56,7 +56,7 @@
 // import { NowRequest, NowResponse } from "@now/node";
 
 module.exports = (req, res) => {
-  //   const { data } = req.body;
+  const { data } = req.body;
   console.log(req, "DATA)");
   const nodemailer = require("nodemailer");
 
