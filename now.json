@@ -1,10 +1,10 @@
 {
   "build": {
     "env": {
-      "API_URL": "@https://gatsby-starter-portfolio-bella.now.sh"
+      "API_URL": "https://gatsby-starter-portfolio-bella.now.sh"
     }
   },
   "env": {
-    "API_URL": "@https://gatsby-starter-portfolio-bella.now.sh"
+    "API_URL": "https://gatsby-starter-portfolio-bella.now.sh"
   }
 }
