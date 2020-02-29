@@ -52,15 +52,14 @@ export default () => {
     })
       .then(response => {
         console.log("response", response);
-        // handleServerResponse(
-        //   true,
-        //   "Thank you, your message has been submitted."
-        // );
+        handleServerResponse(
+          true,
+          "Thank you, your message has been submitted."
+        );
       })
       .catch(error => {
         console.log(error, "ERROR");
-        // console.log(response, "RESPONSE");
-        // handleServerResponse(false, error.response.data.error);
+        handleServerResponse(false, error.response.data.error);
       });
   };
   return (
