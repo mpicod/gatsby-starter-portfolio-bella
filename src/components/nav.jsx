@@ -207,7 +207,7 @@ const Nav = () => {
                     ) : (
                       <>
                         <a
-                          className="px-2 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out dropdown"
+                          className="relative px-2 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out dropdown"
                           id="navbarDropdownMenuLink"
                           role="button"
                           data-toggle="dropdown"
@@ -215,9 +215,9 @@ const Nav = () => {
                           aria-expanded="false"
                         >
                           {l.primary.label.text}
-                          <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
+                          <ul className="dropdown-menu absolute hidden text-gray-700 left-0 ">
                             {l.items.map(i => (
-                              <li className="">
+                              <li className="mb-0">
                                 <a
                                   className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
                                   href={i.sub_nav_link.url}
@@ -234,11 +234,11 @@ const Nav = () => {
                 </div>
               </div>
               <div className="hidden md:block text-right">
-                <span className="inline-flex rounded-md shadow-md">
-                  <span className="inline-flex rounded-md shadow-xs">
+                <span className="inline-flex rounded-md shadow-md transform hover:-translate-y-1 transition duration-300">
+                  <span className="inline-flex ">
                     <a
                       href="#"
-                      className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-100 hover:bg-gray-50 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+                      className=" inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-100 hover:bg-gray-50 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
                     >
                       Contactez-nous !
                     </a>

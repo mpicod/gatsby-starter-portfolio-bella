@@ -22,26 +22,49 @@ export default class Pillars extends Component {
 </div> */}
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">
             {this.props.pillars.map(p => (
-              <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 text-white p-8 mt-5 m-auto">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md text-white mx-6 my-4 ">
-                  <img src={p.pillar_icon.url} alt={p.pillar_icon.alt} />
-                  {/* <img src={Moderniser} alt={p.pillar_icon.alt} /> */}
+              <a href={p.pillar_cta.url}>
+                <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 text-white p-8 mt-5 m-auto transform hover:-translate-y-1 transition duration-300">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md text-white mx-6 my-4 ">
+                    <img
+                      src={p.pillar_icon.url}
+                      alt={p.pillar_icon.alt}
+                      data-sal="Fade"
+                    />
+                    {/* <img src={Moderniser} alt={p.pillar_icon.alt} /> */}
+                  </div>
+                  <div className="px-6 py-4 flex flex-col">
+                    <h5
+                      className="text-xl leading-6 font-bold font-medium text-white"
+                      data-sal="slide-up"
+                      data-sal-delay="300"
+                      data-sal-easing="ease-in-out"
+                      data-sal-duration="500"
+                    >
+                      {p.pillar_title1.text}
+                    </h5>
+                    <p
+                      className="mt-2 text-base leading-6 text-gray-500"
+                      data-sal="slide-up"
+                      data-sal-delay="300"
+                      data-sal-easing="ease-in-out"
+                      data-sal-duration="500"
+                    >
+                      {p.pillar_text.text}
+                    </p>
+                    <div
+                      className="self-end text-sm text-primary-900 flex text-bold mt-3 "
+                      data-sal="slide-up"
+                      data-sal-delay="300"
+                      data-sal-easing="ease-in-out"
+                      data-sal-duration="500"
+                    >
+                      <span className="transform hover:translate-x-1 transition duration-300 inline-flex ">
+                        Voir plus <img src={Arrow} className="btn-arrow ml-2" />
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="px-6 py-4 flex flex-col">
-                  <h5 className="text-xl leading-6 font-bold font-medium text-white">
-                    {p.pillar_title1.text}
-                  </h5>
-                  <p className="mt-2 text-base leading-6 text-gray-500">
-                    {p.pillar_text.text}
-                  </p>
-                  <a
-                    className="self-end text-sm text-primary-900 flex text-bold mt-3"
-                    href={p.pillar_cta.url}
-                  >
-                    Voir plus <img src={Arrow} className="btn-arrow ml-2" />
-                  </a>
-                </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

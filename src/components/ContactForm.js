@@ -69,13 +69,31 @@ export default () => {
     <main>
       <div className="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="md:ml-auto md:w-1/2 md:pl-10">
-          <div className="text-base leading-6 font-semibold uppercase tracking-wider text-gray-300">
+          <div
+            className="text-base leading-6 font-semibold uppercase tracking-wider text-gray-300"
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease-in-out"
+            data-sal-duration="500"
+          >
             Commencez maintenant
           </div>
-          <h2 className="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
+          <h2
+            className="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10"
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease-in-out"
+            data-sal-duration="500"
+          >
             Contactez-nous !
           </h2>
-          <p className="mt-3 text-lg leading-7 text-gray-300">
+          <p
+            className="mt-3 text-lg leading-7 text-gray-300"
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease-in-out"
+            data-sal-duration="500"
+          >
             ZenOps360 et ses experts se tiennent à votre disposition pour
             répondre à vos demandes ! N'hésitez pas à nous laisser un message et
             nous reviendrons vers vous rapidement.
@@ -95,6 +113,10 @@ export default () => {
               onChange={handleOnChange}
               required
               value={inputs.email}
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease-in-out"
+              data-sal-duration="500"
             />
             <textarea
               className="mt-3  appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:max-w-xs"
@@ -104,11 +126,19 @@ export default () => {
               onChange={handleOnChange}
               required
               value={inputs.message}
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease-in-out"
+              data-sal-duration="500"
             />
             <div className="my-3 mt-3 rounded-md shadow sm:flex-shrink-0">
               <button
                 disabled={status.submitting}
-                className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out sm:max-w-xs"
+                data-sal="slide-up"
+                data-sal-delay="300"
+                data-sal-easing="ease-in-out"
+                data-sal-duration="500"
+                className="transform hover:translate-x-1 transition duration-300 w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out sm:max-w-xs"
               >
                 {!status.submitting ? (
                   !status.submitted ? (
@@ -120,12 +150,12 @@ export default () => {
                   "Envoi en cours..."
                 )}
               </button>
-              {status.info.error && (
+              {/* {status.info.error && (
                 <div className="error">Error: {status.info.message}</div>
               )}
               {!status.info.error && status.info.message && (
                 <p>{status.info.message}</p>
-              )}
+              )} */}
             </div>
           </form>
         </div>

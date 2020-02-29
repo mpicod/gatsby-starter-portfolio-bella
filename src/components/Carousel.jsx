@@ -23,6 +23,7 @@ function SampleNextArrow(props) {
   return (
     <button
       onClick={onClick}
+      data-sal="fade"
       style={{ ...style, zIndex: "1" }}
       className="absolute top-0 mt-32 right-0 bg-white rounded-full shadow-md h-12 w-12 text-2xl text-primary-600 hover:text-primary-400 focus:text-primary-400 -mr-6 focus:outline-none focus:shadow-outline"
     >
@@ -37,6 +38,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <button
+      data-sal="fade"
       style={{ ...style, zIndex: "1" }}
       onClick={onClick}
       className="absolute top-0 mt-32 left-0 bg-white rounded-full shadow-md h-12 w-12 text-2xl text-primary-600 hover:text-primary-400 focus:text-primary-400 -ml-6 focus:outline-none focus:shadow-outline"

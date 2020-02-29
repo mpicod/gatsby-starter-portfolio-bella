@@ -12,18 +12,39 @@ export default class Feature extends Component {
         </div> */}
 
         <div className="w-full md:w-1/2 pb-8 px-6">
-          <div className="flex items-center font-bold rounded-md text-primary-900">
+          <div
+            className="flex items-center font-bold rounded-md text-primary-900"
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease-in-out"
+            data-sal-duration="500"
+          >
             {this.props.label}
           </div>
-          <h2 className="mt-6 text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+          <h2
+            className="mt-6 text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10 "
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease-in-out"
+            data-sal-duration="500"
+          >
             {this.props.title}
           </h2>
-          <p className="mt-6 text-lg leading-7 text-gray-500">
+          <p
+            className="mt-6 text-lg leading-7 text-gray-500"
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease-in-out"
+            data-sal-duration="500"
+          >
             {this.props.desc}
           </p>
         </div>
 
-        <div className="w-full md:w-1/2 md:px-0 hidden md:block text-center">
+        <div
+          className="w-full md:w-1/2 md:px-0 hidden md:block text-center"
+          data-sal="fade"
+        >
           {this.props.img.localFile && (
             <Img fluid={this.props.img.localFile.childImageSharp.fluid} />
           )}

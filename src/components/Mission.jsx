@@ -36,10 +36,22 @@ export default class Mission extends Component {
           </svg>
 
           <div className="relative">
-            <h3 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+            <h3
+              className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease-in-out"
+              data-sal-duration="500"
+            >
               {this.props.title.text}
             </h3>
-            <p className="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
+            <p
+              className="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500 "
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease-in-out"
+              data-sal-duration="500"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
               magnam voluptatum cupiditate veritatis in, accusamus quisquam.
             </p>
@@ -202,7 +214,7 @@ export default class Mission extends Component {
                 {/* {console.log(this.props.data)} */}
                 <ul className="mt-10">
                   {this.props.data.map(m => (
-                    <li className="my-10">
+                    <li className="my-10" data-sal="slide-up">
                       <div className="flex">
                         <div className="flex-shrink-0">
                           <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">

@@ -67,10 +67,20 @@ export default class Testimonial extends Component {
                       className="mx-auto h-10 w-10 rounded-full"
                       src={Testimony}
                       alt=""
+                      data-sal="slide-up"
+                      data-sal-delay="300"
+                      data-sal-easing="ease-in-out"
+                      data-sal-duration="500"
                     />
                   </div>
                   <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                    <div className="text-base leading-6 font-medium text-gray-900">
+                    <div
+                      className="text-base leading-6 font-medium text-gray-900"
+                      data-sal="slide-up"
+                      data-sal-delay="300"
+                      data-sal-easing="ease-in-out"
+                      data-sal-duration="500"
+                    >
                       {this.props.Name}
                     </div>
 
@@ -82,7 +92,13 @@ export default class Testimonial extends Component {
                       <path d="M11 0h3L9 20H6l5-20z" />
                     </svg>
 
-                    <div className="text-base leading-6 font-medium text-gray-500">
+                    <div
+                      className="text-base leading-6 font-medium text-gray-500"
+                      data-sal="slide-up"
+                      data-sal-delay="300"
+                      data-sal-easing="ease-in-out"
+                      data-sal-duration="500"
+                    >
                       {this.props.Job}
                     </div>
                   </div>
