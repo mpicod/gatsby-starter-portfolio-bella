@@ -69,7 +69,7 @@ module.exports = (req, res) => {
   });
 
   const mailOptions = {
-    from: "mktg.zenops360@gmail.com",
+    from: req.body.email || "mktg.zenops360@gmail.com",
     to: "mktg.zenops360@gmail.com",
     subject: "ZenOps 360 Contact ",
     text: req.body.message || "[No message]"

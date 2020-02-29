@@ -90,14 +90,16 @@ export default () => {
               id="email"
               type="email"
               name="_replyto"
+              placeholder="Entrez votre adresse mail"
               onChange={handleOnChange}
               required
               value={inputs.email}
             />
-            <input
+            <textarea
               className="mt-3  appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:max-w-xs"
               id="message"
               name="message"
+              placeholder="Écrivez votre message"
               onChange={handleOnChange}
               required
               value={inputs.message}
