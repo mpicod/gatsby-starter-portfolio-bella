@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Check from "../images/check.svg";
 
 export default () => {
   const [status, setStatus] = useState({
@@ -112,7 +113,7 @@ export default () => {
                 {!status.submitting
                   ? !status.submitted
                     ? "Envoyer le message!"
-                    : "Envoyé!"
+                    : "Envoyé!" + <img src={Check} />
                   : "Envoi en cours..."}
               </button>
               {status.info.error && (
