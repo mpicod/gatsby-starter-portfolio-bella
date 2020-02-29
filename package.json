@@ -42,9 +42,6 @@
   },
   "keywords": [
     "gatsby",
-    "gatsby-starter",
-    "gatsby-starter-portfolio",
-    "lekoarts",
     "prismic"
   ],
   "license": "MIT",
@@ -56,7 +53,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "dotenv": "^6.1.0",
+    "dotenv": "^6.2.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",

@@ -43,22 +43,24 @@ export default () => {
   const handleOnSubmit = e => {
     e.preventDefault();
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
-    console.log("inputs", inputs);
+    console.log("ENV", process.env.API_URL);
+    console.log("ENV", process.env);
+    // console.log("ENV API", API_URL);
     axios({
       method: "POST",
-      url: "https://gatsby-starter-portfolio-bella.now.sh/api/sendMail",
+      url: `${process.env.API_URL}/api/sendMail`,
       data: inputs,
       headers: {}
     })
       .then(response => {
-        console.log("response", response);
+        // console.log("response", response);
         handleServerResponse(
           true,
           "Thank you, your message has been submitted."
         );
       })
       .catch(error => {
-        console.log(error, "ERROR");
+        // console.log(error, "ERROR");
         handleServerResponse(false, error.response.data.error);
       });
   };

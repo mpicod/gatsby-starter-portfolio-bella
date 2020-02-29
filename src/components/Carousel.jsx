@@ -100,7 +100,7 @@ export default class SimpleSlider extends React.Component {
               </svg> */}
             </div>
           </div>
-          {console.log(this.props.data)}
+
           <div className="w-full md:w-3/5 h-full items-center bg-gray-100 rounded-lg">
             <Slider {...settings}>
               {this.props.data.items.map(i => (

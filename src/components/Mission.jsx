@@ -199,7 +199,7 @@ export default class Mission extends Component {
           <div className="relative mt-12 sm:mt-16 lg:mt-24">
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
               <div className="lg:col-start-2">
-                {console.log(this.props.data)}
+                {/* {console.log(this.props.data)} */}
                 <ul className="mt-10">
                   {this.props.data.map(m => (
                     <li className="my-10">

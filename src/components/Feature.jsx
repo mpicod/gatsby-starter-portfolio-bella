@@ -4,14 +4,14 @@ import Img from "gatsby-image";
 export default class Feature extends Component {
   render() {
     return (
-      <div class="columns flex flex-wrap items-center max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 features">
-        {/* <div class="w-full md:hidden md:px-0 text-center mb-16">
+      <div className="columns flex flex-wrap items-center max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 features">
+        {/* <div className="w-full md:hidden md:px-0 text-center mb-16">
           {this.props.img.localFile && (
             <Img fluid={this.props.img.localFile.childImageSharp.fluid} />
           )}
         </div> */}
 
-        <div class="w-full md:w-1/2 pb-8 px-6">
+        <div className="w-full md:w-1/2 pb-8 px-6">
           <div className="flex items-center font-bold rounded-md text-primary-900">
             {this.props.label}
           </div>
@@ -23,7 +23,7 @@ export default class Feature extends Component {
           </p>
         </div>
 
-        <div class="w-full md:w-1/2 md:px-0 hidden md:block text-center">
+        <div className="w-full md:w-1/2 md:px-0 hidden md:block text-center">
           {this.props.img.localFile && (
             <Img fluid={this.props.img.localFile.childImageSharp.fluid} />
           )}

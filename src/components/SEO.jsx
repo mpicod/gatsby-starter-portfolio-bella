@@ -126,7 +126,7 @@ const SEO = props => {
         }
         ;`}
       </script> */}
-      <script
+      {/* <script
         async
         defer
         src="//static.cdn.prismic.io/prismic.js?repo=demo-bella&new=true"
@@ -134,7 +134,7 @@ const SEO = props => {
       <script
         type="text/javascript"
         src="https://static.cdn.prismic.io/prismic.min.js?new=true"
-      ></script>
+      ></script> */}
       <link
         rel="stylesheet"
         type="text/css"
