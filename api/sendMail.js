@@ -72,7 +72,9 @@ module.exports = (req, res) => {
     from: req.body.email || "mktg.zenops360@gmail.com",
     to: "mktg.zenops360@gmail.com",
     subject: "ZenOps 360 Contact ",
-    text: req.body.message + req.body.email || "[No message]" + req.body.email
+    text:
+      req.body.message + "   " + req.body.email ||
+      "[No message]" + "   " + req.body.email
   };
   console.log(req.body.email, req.body.message, "DATAMAGGLE)");
   transporter.sendMail(mailOptions, function(error, info) {
