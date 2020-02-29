@@ -86,25 +86,27 @@ export default () => {
             onSubmit={handleOnSubmit}
           >
             <input
-              aria-label="Email address"
-              type="email"
               className="mt-3 appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:max-w-xs"
-              placeholder="Enter your email"
+              id="email"
+              type="email"
+              name="_replyto"
               onChange={handleOnChange}
               required
               value={inputs.email}
             />
             <input
-              aria-label="Message"
-              type="textarea"
-              required
               className="mt-3  appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:max-w-xs"
-              placeholder="Enter your message"
+              id="message"
+              name="message"
               onChange={handleOnChange}
+              required
               value={inputs.message}
             />
             <div className="my-3 mt-3 rounded-md shadow sm:flex-shrink-0">
-              <button className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out sm:max-w-xs">
+              <button
+                disabled={status.submitting}
+                className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out sm:max-w-xs"
+              >
                 {!status.submitting
                   ? !status.submitted
                     ? "Envoyer le message!"
