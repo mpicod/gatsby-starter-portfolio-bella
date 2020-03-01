@@ -124,46 +124,6 @@ const Nav = () => {
         <div>
           <div className="relative bg-white overflow-hidden">
             <div className="hidden lg:block lg:absolute lg:inset-0">
-              {/* <svg
-                className="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8"
-                width="640"
-                height="784"
-                fill="none"
-                viewBox="0 0 640 784"
-              >
-                <defs>
-                  <pattern
-                    id="svg-pattern-squares-desktop"
-                    x="118"
-                    y="0"
-                    width="20"
-                    height="20"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <rect
-                      x="0"
-                      y="0"
-                      width="4"
-                      height="4"
-                      className="text-gray-200"
-                      fill="currentColor"
-                    />
-                  </pattern>
-                </defs>
-                <rect
-                  y="72"
-                  width="640"
-                  height="640"
-                  className="text-gray-50"
-                  fill="currentColor"
-                />
-                <rect
-                  x="118"
-                  width="404"
-                  height="784"
-                  fill="url(#svg-pattern-squares-desktop)"
-                />
-              </svg> */}
               <img src={Logo} />
             </div>
           </div>
@@ -200,7 +160,7 @@ const Nav = () => {
                     return l.primary.link ? (
                       <a
                         href={l.primary.link.url}
-                        className="px-2 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                        className="px-4 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
                       >
                         {l.primary.label.text}
                       </a>
@@ -215,7 +175,7 @@ const Nav = () => {
                           aria-expanded="false"
                         >
                           {l.primary.label.text}
-                          <ul className="dropdown-menu absolute hidden text-gray-700 left-0 ">
+                          <ul className="dropdown-menu absolute hidden text-gray-700 left-0">
                             {l.items.map(i => (
                               <li className="mb-0">
                                 <a

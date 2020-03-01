@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 export default class ContactBanner extends Component {
   render() {
     return (
-      <div className="relative bg-gray-900">
+      <div className="relative bg-gray-900" id="contact">
         <div className="h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
           <img
             className="w-full h-full object-cover p-16"

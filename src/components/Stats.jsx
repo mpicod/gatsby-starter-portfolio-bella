@@ -35,15 +35,15 @@ export default class Stats extends Component {
                   {this.props.items.map(i => (
                     <div
                       className="border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
-                      data-sal="slide-up"
-                      data-sal-delay="300"
-                      data-sal-easing="ease-in-out"
-                      data-sal-duration="500"
+                      // data-sal="slide-up"
+                      // data-sal-delay="300"
+                      // data-sal-easing="ease-in-out"
+                      // data-sal-duration={500 + i * 100}
                     >
                       <p
                         className="text-5xl leading-none font-extrabold text-primary-600"
                         data-sal="slide-up"
-                        data-sal-delay="300"
+                        data-sal-delay={300 + i * 100}
                         data-sal-easing="ease-in-out"
                         data-sal-duration="500"
                       >
@@ -52,7 +52,7 @@ export default class Stats extends Component {
                       <p
                         className="mt-2 text-lg leading-6 font-medium text-gray-500"
                         data-sal="slide-up"
-                        data-sal-delay="300"
+                        data-sal-delay={300 + i * 100}
                         data-sal-easing="ease-in-out"
                         data-sal-duration="500"
                       >

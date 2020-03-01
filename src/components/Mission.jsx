@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Team from "../images/team.jpg";
+import Pattern from "../images/pattern.svg";
 
 export default class Mission extends Component {
   render() {
     return (
       <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
-          <svg
+          {/* <svg
             className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
             width="404"
             height="784"
@@ -33,8 +34,10 @@ export default class Mission extends Component {
               </pattern>
             </defs>
             <rect width="404" height="784" fill="url(#svg-pattern-squares-1)" />
-          </svg>
-
+          </svg> */}
+          <div className="absolute absolute-pattern">
+            <img src={Pattern} />
+          </div>
           <div className="relative">
             <h3
               className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"

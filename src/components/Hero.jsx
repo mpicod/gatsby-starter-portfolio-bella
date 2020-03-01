@@ -30,7 +30,7 @@ export default class Hero extends Component {
           <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
             <div className="rounded-md shadow transform hover:-translate-y-1 transition duration-300">
               <a
-                href="#"
+                href="#contact"
                 data-sal="slide-up"
                 data-sal-delay="300"
                 data-sal-easing="ease-in-out"
