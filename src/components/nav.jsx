@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import Logo from "../images/logo_zenops.svg";
+import Moderniser from "../images/moderniser_white.svg";
 
 const SimpleLink = props => (
   <li className="nav-item active">
@@ -160,14 +161,14 @@ const Nav = () => {
                     return l.primary.link ? (
                       <a
                         href={l.primary.link.url}
-                        className="px-4 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                        className="p-4 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
                       >
                         {l.primary.label.text}
                       </a>
                     ) : (
                       <>
                         <a
-                          className="relative px-2 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out dropdown"
+                          className="relative p-3 rounded-t font-medium text-gray-500 hover:text-gray-100 hover:bg-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out dropdown"
                           id="navbarDropdownMenuLink"
                           role="button"
                           data-toggle="dropdown"
@@ -175,14 +176,18 @@ const Nav = () => {
                           aria-expanded="false"
                         >
                           {l.primary.label.text}
-                          <ul className="dropdown-menu absolute hidden text-gray-700 left-0">
+                          <ul className="dropdown-menu absolute hidden text-gray-100 left-0 flex rounded-b">
                             {l.items.map(i => (
                               <li className="mb-0">
                                 <a
-                                  className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                  className=" bg-gray-900 hover:bg-gray-400 py-2 px-4 whitespace-no-wrap flex justify-center align-center"
                                   href={i.sub_nav_link.url}
                                 >
-                                  {i.sub_nav_link_label.text}
+                                  {/* <img
+                                    className="mx-2 nav-icon"
+                                    src={Moderniser}
+                                  /> */}
+                                  <p>{i.sub_nav_link_label.text}</p>
                                 </a>
                               </li>
                             ))}

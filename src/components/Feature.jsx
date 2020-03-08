@@ -42,7 +42,7 @@ export default class Feature extends Component {
         </div>
 
         <div
-          className="w-full md:w-1/2 md:px-0 hidden md:block text-center"
+          className="w-full md:w-1/2 md:px-0 md:block text-center"
           data-sal="fade"
         >
           {this.props.img.localFile && (
