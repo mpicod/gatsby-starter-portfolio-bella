@@ -78,7 +78,7 @@ export default class SimpleSlider extends React.Component {
             style={{ minHeight: "19rem" }}
           >
             <img
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              className="absolute inset-0 w-full h-full object-cover object-center "
               src={this.props}
               alt=""
             />

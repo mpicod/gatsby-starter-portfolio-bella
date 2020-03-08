@@ -29,7 +29,7 @@ export default class ContactBanner extends Component {
             <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="max-w-md mx-auto lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 items-start">
                 <div class="rounded-lg shadow-lg overflow-hidden">
-                  <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+                  <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6 bg-img">
                     <div>
                       <span class="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-gray-200 text-primary-600">
                         ZenOps paris
@@ -44,7 +44,7 @@ export default class ContactBanner extends Component {
                       01 45 06 24 14
                     </p>
                   </div>
-                  <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+                  <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6 bg-img">
                     <div>
                       <span class="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-gray-200 text-primary-600">
                         ZenOps Valence

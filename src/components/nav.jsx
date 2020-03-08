@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
-import Logo from "../images/logo_zenops.svg";
+import Logo from "../images/zenops_mono.svg";
 import Moderniser from "../images/moderniser_white.svg";
 
 const SimpleLink = props => (
