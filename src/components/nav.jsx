@@ -202,7 +202,7 @@ const Nav = () => {
                 <span className="inline-flex rounded-md shadow-md transform hover:-translate-y-1 transition duration-300">
                   <span className="inline-flex ">
                     <a
-                      href="#"
+                      href="#contactSection"
                       className=" inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-100 hover:bg-gray-50 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
                     >
                       Contactez-nous !

@@ -17,7 +17,7 @@ export default class Logos extends Component {
               data-sal-easing="ease-in-out"
               data-sal-duration="500"
             >
-              <img className="h-12" src={Suse} alt="Tuple" />
+              <img className="h-12 sm:w-1/2" src={Suse} alt="Tuple" />
             </div>
             <div
               className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1"
@@ -26,7 +26,7 @@ export default class Logos extends Component {
               data-sal-easing="ease-in-out"
               data-sal-duration="500"
             >
-              <img className="h-12" src={SS} alt="Mirage" />
+              <img className="h-12 sm:w-1/2" src={SS} alt="Mirage" />
             </div>
             <div
               className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1"
@@ -35,7 +35,7 @@ export default class Logos extends Component {
               data-sal-easing="ease-in-out"
               data-sal-duration="500"
             >
-              <img className="h-12" src={Sophos} alt="Transistor" />
+              <img className="h-12 sm:w-1/2" src={Sophos} alt="Transistor" />
             </div>
             <div
               className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1"
@@ -44,7 +44,7 @@ export default class Logos extends Component {
               data-sal-easing="ease-in-out"
               data-sal-duration="500"
             >
-              <img className="h-12" src={Sophos} alt="Transistor" />
+              <img className="h-12 sm:w-1/2" src={Sophos} alt="Transistor" />
             </div>
             <div
               className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1"
@@ -53,7 +53,7 @@ export default class Logos extends Component {
               data-sal-easing="ease-in-out"
               data-sal-duration="500"
             >
-              <img className="h-12" src={Micro} alt="Workcation" />
+              <img className="h-12 sm:w-1/2" src={Micro} alt="Workcation" />
             </div>
           </div>
         </div>
