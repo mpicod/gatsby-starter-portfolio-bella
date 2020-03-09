@@ -52,7 +52,8 @@ export default class ContactBanner extends Component {
                     </div>
                     <div class="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
                       <span class="ml-1 text-2xl leading-8 font-medium text-gray-900">
-                        1 Place de la Pyramide, 92911 Valence
+                        NetOnline, bâtiment LE CRYSVAL 5, Avenue de la Gare
+                        26300 Alixan
                       </span>
                     </div>
                     <p class="mt-5 text-lg leading-7 text-gray-500">
