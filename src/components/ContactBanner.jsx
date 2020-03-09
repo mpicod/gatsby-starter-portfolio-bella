@@ -61,8 +61,8 @@ export default class ContactBanner extends Component {
                   </div>
                   <div class="px-6 pt-6 pb-8 bg-gray-100 sm:p-10 sm:pt-6"></div>
                 </div>
-                <div class="mt-4 rounded-lg shadow-lg overflow-hidden lg:mt-0">
-                  <div class="bg-gray-100 sm:p-10 p-8">
+                <div class="mt-4 rounded-lg shadow-lg overflow-hidden lg:mt-0 self-stretch">
+                  <div class="bg-gray-100 sm:p-10 p-8 h-full">
                     <ContactForm></ContactForm>
                   </div>
                   {/* <div class="px-6 pt-6 pb-8 bg-gray-100 sm:p-10 sm:pt-6"></div> */}
