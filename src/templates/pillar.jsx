@@ -32,7 +32,7 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
       </header> */}
       <Hero
         title={data.title.text}
-        description={data.pillar_description.html}
+        description={data.pillar_description.text}
         icon={data.pillar_icon}
       />
       <Stats
@@ -71,7 +71,7 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
       {data.features.map(f => (
         <Feature
           title={f.feature_title.text}
-          desc={f.feature_description.html}
+          desc={f.feature_description.text}
           label={f.feature_label.text}
           img={f.feature_image}
         />
