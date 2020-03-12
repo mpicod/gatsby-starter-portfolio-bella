@@ -79,6 +79,7 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
         <Feature
           title={f.feature_title.text}
           desc={f.feature_description.text}
+          label={f.feature_label.text}
           img={f.feature_image}
         />
       ))}
