@@ -16,15 +16,10 @@ import "../style/custom.scss";
 import Secure from "../images/secure.svg";
 import Img from "gatsby-image";
 
-const items = [
-  { stat_number: "63%", stat_desc: "Description" },
-  { stat_number: "18%", stat_desc: "Text:" },
-  { stat_number: "93%", stat_desc: "Text" }
-];
-
 const PillarPage = ({ data: { prismicPillarpage } }) => {
   // const { edges } = PillarQuery;
   const { data } = prismicPillarpage;
+  console.log("DATAPILLAR", data);
   return (
     <Layout>
       <Nav></Nav>
@@ -41,11 +36,9 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
         icon={data.pillar_icon}
       />
       <Stats
-        title={"Les tendances du marché"}
-        description={
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Repellendus repellat laudantium."
-        }
-        items={items}
+        title={data.body[0].primary.key_number_title.text}
+        description={data.body[0].primary.key_numbers_intro.text}
+        items={data.body[0].items}
       />
 
       {/* <section className="container d-flex flex-column align-items-center justify-content-center ">
@@ -98,6 +91,24 @@ export const pageQuery = graphql`
     prismicPillarpage(uid: { eq: $uid }) {
       uid
       data {
+        body {
+          primary {
+            key_number_title {
+              text
+            }
+            key_numbers_intro {
+              text
+            }
+          }
+          items {
+            key_number {
+              text
+            }
+            key_number_details {
+              text
+            }
+          }
+        }
         title {
           text
         }

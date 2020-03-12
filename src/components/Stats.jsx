@@ -47,7 +47,7 @@ export default class Stats extends Component {
                         data-sal-easing="ease-in-out"
                         data-sal-duration="500"
                       >
-                        {i.stat_number}
+                        {i.key_number.text}
                       </p>
                       <p
                         className="mt-2 text-lg leading-6 font-medium text-gray-500"
@@ -56,7 +56,7 @@ export default class Stats extends Component {
                         data-sal-easing="ease-in-out"
                         data-sal-duration="500"
                       >
-                        {i.stat_desc}
+                        {i.key_number_details.text}
                       </p>
                     </div>
                   ))}

@@ -91,6 +91,16 @@ module.exports = {
         enterEventName: "sal:in", // Enter event name
         exitEventName: "sal:out" // Exit event name
       }
+    },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: "UA-160422852-1",
+          anonymize: true // default is true
+        },
+        environments: ["production", "development"]
+      }
     }
   ]
 };
