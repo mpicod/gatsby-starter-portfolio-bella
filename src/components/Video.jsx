@@ -16,6 +16,7 @@ export default class Video extends Component {
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
+            className=" mx-auto sm:flex sm:justify-center my-6"
           ></iframe>
         </div>
       </div>
