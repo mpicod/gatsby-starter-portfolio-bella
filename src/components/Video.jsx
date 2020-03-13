@@ -8,14 +8,14 @@ export default class Video extends Component {
           <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
             Le mot de l'expert
           </h2>
+
           <iframe
-            title="vimeo-player"
-            src="https://player.vimeo.com/video/386424847"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allowFullScreen
-            className=" mx-auto sm:flex sm:justify-center my-6"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/CyZ-V7y6_AM"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
           ></iframe>
         </div>
       </div>

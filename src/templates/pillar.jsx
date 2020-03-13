@@ -4,7 +4,6 @@ import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 import Nav from "../components/nav";
 import Stats from "../components/Stats";
-import Background from "../images/background.png";
 import Saltstack from "../images/ss.svg";
 import PartnersBanner from "../components/PartnersBanner";
 import Hero from "../components/Hero";

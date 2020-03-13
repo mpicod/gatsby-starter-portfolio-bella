@@ -8,7 +8,7 @@ export default class Pillars extends Component {
       <div className="py-12">
         <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
           <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mb-16">
-            {this.props.title.text}Nos pilliers
+            {this.props.title}
           </h2>
 
           {/* <div className="max-w-sm rounded overflow-hidden shadow-lg">
@@ -22,8 +22,8 @@ export default class Pillars extends Component {
 </div> */}
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">
             {this.props.pillars.map(p => (
-              <a href={p.pillar_cta.url}>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 text-white p-8 mt-5 m-auto transform hover:-translate-y-1 transition duration-300">
+              <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 text-white p-8 mt-5 m-auto transform hover:-translate-y-1 transition duration-300">
+                <a href={p.pillar_cta.url}>
                   <div className="flex items-center justify-center h-12 w-12 rounded-md text-white mx-6 my-4 ">
                     <img
                       src={p.pillar_icon.url}
@@ -63,8 +63,8 @@ export default class Pillars extends Component {
                       </span>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             ))}
           </div>
         </div>

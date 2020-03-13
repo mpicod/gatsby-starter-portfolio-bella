@@ -17,7 +17,7 @@ import Moderniser from "../images/moderniser.svg";
 import Simplify from "../images/simplify.svg";
 
 import Secure from "../images/secure.svg";
-import Background from "../images/background.png";
+
 import Saltstack from "../images/ss.svg";
 import Testimony from "../images/profil.png";
 

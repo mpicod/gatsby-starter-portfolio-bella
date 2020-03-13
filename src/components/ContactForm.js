@@ -66,10 +66,7 @@ export default () => {
       });
   };
   return (
-    <div
-      className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 "
-      id="contactSection"
-    >
+    <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <div className="">
         <div
           className="mt-8 text-base leading-6 font-semibold uppercase tracking-wider text-primary-300"
