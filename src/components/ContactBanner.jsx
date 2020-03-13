@@ -30,7 +30,7 @@ export default class ContactBanner extends Component {
                 <div className="rounded-lg shadow-lg overflow-hidden">
                   <div className="px-6 py-8 bg-white sm:p-10 sm:pb-6 bg-img">
                     <div>
-                      <span className="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-gray-200 text-primary-600">
+                      <span className="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide bg-gray-200 text-primary-600">
                         ZenOps paris
                       </span>
                     </div>
@@ -45,7 +45,7 @@ export default class ContactBanner extends Component {
                   </div>
                   <div className="px-6 py-8 bg-white sm:p-10 sm:pb-6 bg-img">
                     <div>
-                      <span className="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-gray-200 text-primary-600">
+                      <span className="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide bg-gray-200 text-primary-600">
                         ZenOps Valence
                       </span>
                     </div>
