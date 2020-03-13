@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Testimony from "../images/profil.png";
+import Img from "gatsby-image";
 
 export default class Testimonial extends Component {
   render() {
@@ -58,14 +59,15 @@ export default class Testimonial extends Component {
             </svg>
             <blockquote className="mt-8">
               <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
-                <p>{this.props.Quote}</p>
+                {/* <p>{this.props.Quote}</p> */}
+                {this.props.data.primary.quote.text}
               </div>
               <footer className="mt-8">
                 <div className="md:flex md:items-center md:justify-center">
                   <div className="md:flex-shrink-0">
-                    <img
+                    <Img
                       className="mx-auto h-10 w-10 rounded-full"
-                      src={Testimony}
+                      fluid={this.props.data.primary.portrait_author.fluid}
                       alt=""
                       data-sal="slide-up"
                       data-sal-delay="300"
@@ -81,10 +83,10 @@ export default class Testimonial extends Component {
                       data-sal-easing="ease-in-out"
                       data-sal-duration="500"
                     >
-                      {this.props.Name}
+                      {this.props.data.primary.name_of_the_author.text}
                     </div>
 
-                    <svg
+                    {/* <svg
                       className="hidden md:block mx-1 h-5 w-5 text-primary-600"
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -99,8 +101,9 @@ export default class Testimonial extends Component {
                       data-sal-easing="ease-in-out"
                       data-sal-duration="500"
                     >
-                      {this.props.Job}
-                    </div>
+                      {this.props.data.primary.name_of_the_author.text}
+                    </div> */}
+                    {console.log("TESTIMONIAL", this.props.data)}
                   </div>
                 </div>
               </footer>

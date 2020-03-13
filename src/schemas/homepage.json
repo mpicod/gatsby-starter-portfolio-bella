@@ -94,6 +94,42 @@
         "label": "pillar-group"
       }
     },
+    "contact_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "contact title"
+      }
+    },
+    "contact_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item",
+        "label": "contact-description"
+      }
+    },
+    "adresses": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "adress_label": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+              "label": "Label de l'addresse"
+            }
+          },
+          "adress_details": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+              "label": "Détails de l'adresse"
+            }
+          }
+        },
+        "label": "adresses"
+      }
+    },
     "body": {
       "type": "Slices",
       "fieldset": "Slice zone",
@@ -104,7 +140,8 @@
               "name": "carousel",
               "display": "carousel"
             }
-          ]
+          ],
+          "banniere_logos": []
         },
         "choices": {
           "quote": {
@@ -127,6 +164,14 @@
                   "multi": "paragraph",
                   "label": "Name of the author",
                   "placeholder": "John Doe"
+                }
+              },
+              "testimonial_logo": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "testimonial logo"
                 }
               },
               "portrait_author": {
@@ -184,6 +229,32 @@
                 "type": "Link",
                 "config": {
                   "label": "carousel_link"
+                }
+              }
+            }
+          },
+          "banniere_logos": {
+            "type": "Slice",
+            "fieldset": "Bannière Logos",
+            "description": "Logos partenaire, 6 items",
+            "icon": "business_center",
+            "display": "list",
+            "non-repeat": {
+              "partners_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Partners Title"
+                }
+              }
+            },
+            "repeat": {
+              "partner_logo": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Partner Logo"
                 }
               }
             }
