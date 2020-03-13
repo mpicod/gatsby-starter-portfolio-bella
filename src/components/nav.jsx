@@ -38,7 +38,7 @@ const Nav = () => {
                     text
                   }
                   sub_nav_link {
-                    url
+                    uid
                   }
                 }
               }
@@ -123,6 +123,7 @@ const Nav = () => {
         //   </nav>
         // </div>
         <div>
+          {console.log("navData", data)}
           <div className="relative bg-white overflow-hidden">
             <div className="hidden lg:block lg:absolute lg:inset-0">
               <img src={Logo} />
@@ -147,9 +148,9 @@ const Nav = () => {
                         viewBox="0 0 24 24"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M4 6h16M4 12h16M4 18h16"
                         />
                       </svg>
@@ -158,12 +159,12 @@ const Nav = () => {
                 </div>
                 <div className="hidden md:block md:ml-10">
                   {data.prismicLayout.data.nav.map(l => {
-                    return l.primary.link ? (
+                    return l.primary.link.url ? (
                       <a
                         href={l.primary.link.url}
                         className="p-4 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
                       >
-                        {l.primary.label.text}
+                        {l.primary.label[0].text}
                       </a>
                     ) : (
                       <>
@@ -175,19 +176,19 @@ const Nav = () => {
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          {l.primary.label.text}
+                          {l.primary.label[0].text}
                           <ul className="dropdown-menu absolute hidden text-gray-100 left-0 flex rounded-b">
                             {l.items.map(i => (
                               <li className="mb-0">
                                 <a
                                   className=" bg-gray-900 hover:bg-gray-400 py-2 px-4 whitespace-no-wrap flex justify-center align-center"
-                                  href={i.sub_nav_link.url}
+                                  href={i.sub_nav_link.uid}
                                 >
                                   {/* <img
                                     className="mx-2 nav-icon"
                                     src={Moderniser}
                                   /> */}
-                                  <p>{i.sub_nav_link_label.text}</p>
+                                  <p>{i.sub_nav_link_label[0].text}</p>
                                 </a>
                               </li>
                             ))}
@@ -231,9 +232,9 @@ const Nav = () => {
                         viewBox="0 0 24 24"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M6 18L18 6M6 6l12 12"
                         />
                       </svg>

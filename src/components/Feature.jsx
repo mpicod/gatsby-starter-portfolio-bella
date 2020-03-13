@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Img from "gatsby-image";
+import { Date, Link, RichText } from "prismic-reactjs";
 
 export default class Feature extends Component {
   render() {
@@ -37,7 +38,7 @@ export default class Feature extends Component {
             data-sal-easing="ease-in-out"
             data-sal-duration="500"
           >
-            {this.props.desc}
+            <RichText render={this.props.desc} />
           </p>
         </div>
 
@@ -45,9 +46,8 @@ export default class Feature extends Component {
           className="w-full md:w-1/2 md:px-0 md:block text-center"
           data-sal="fade"
         >
-          {this.props.img.localFile && (
-            <Img fluid={this.props.img.localFile.childImageSharp.fluid} />
-          )}
+          {this.props.img && <Img fluid={this.props.img.fluid} />}
+          {/* {console.log(this.props.img, "IMG")} */}
         </div>
       </div>
     );

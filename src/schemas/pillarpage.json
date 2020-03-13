@@ -1,0 +1,135 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "url"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "title"
+      }
+    },
+    "pillar_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank": true,
+        "label": "pillar_description"
+      }
+    },
+    "features_title": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank": true,
+        "label": "Features Title"
+      }
+    },
+    "features": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "feature_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Feature Image"
+            }
+          },
+          "feature_label": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+              "label": "Feature Label"
+            }
+          },
+          "feature_title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+              "label": "Feature Title"
+            }
+          },
+          "feature_description": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+              "allowTargetBlank": true,
+              "label": "Feature Description"
+            }
+          }
+        },
+        "label": "Features"
+      }
+    },
+    "video": {
+      "type": "Embed",
+      "config": {
+        "label": "video"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "trends": [
+            {
+              "name": "...",
+              "display": ""
+            }
+          ]
+        },
+        "choices": {
+          "trends": {
+            "type": "Slice",
+            "fieldset": "Trends",
+            "description": "Key numbers section",
+            "icon": "bubble_chart",
+            "display": "list",
+            "non-repeat": {
+              "key_number_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Key number title"
+                }
+              },
+              "key_numbers_intro": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, o-list-item",
+                  "allowTargetBlank": true,
+                  "label": "key_numbers_intro"
+                }
+              }
+            },
+            "repeat": {
+              "key_number": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, o-list-item",
+                  "allowTargetBlank": true,
+                  "label": "key_number"
+                }
+              },
+              "key_number_details": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, o-list-item",
+                  "allowTargetBlank": true,
+                  "label": "Key number details"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -36,6 +36,14 @@ module.exports = {
           children
         ) => {
           // Your HTML serializer
+        },
+        schemas: {
+          homepage: require("./src/schemas/homepage.json"),
+          pillarpage: require("./src/schemas/pillarpage.json")
+        },
+        shouldDownloadImage: ({ node, key, value }) => {
+          // Return true to download the image or false to skip.
+          return true;
         }
       }
     },

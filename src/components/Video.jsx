@@ -13,8 +13,8 @@ export default class Video extends Component {
             src="https://player.vimeo.com/video/386424847"
             width="640"
             height="360"
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
             className=" mx-auto sm:flex sm:justify-center my-6"
           ></iframe>
         </div>

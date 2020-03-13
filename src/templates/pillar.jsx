@@ -15,6 +15,7 @@ import Video from "../components/Video";
 import "../style/custom.scss";
 import Secure from "../images/secure.svg";
 import Img from "gatsby-image";
+import { Date, Link, RichText } from "prismic-reactjs";
 
 const PillarPage = ({ data: { prismicPillarpage } }) => {
   // const { edges } = PillarQuery;
@@ -71,9 +72,10 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
       {data.features.map(f => (
         <Feature
           title={f.feature_title.text}
-          desc={f.feature_description.text}
+          desc={f.feature_description.raw}
           label={f.feature_label.text}
           img={f.feature_image}
+          // {...console.log(f.feature_image, "f.feature_image")}
         />
       ))}
 
@@ -92,20 +94,23 @@ export const pageQuery = graphql`
       uid
       data {
         body {
-          primary {
-            key_number_title {
-              text
+          ... on PrismicPillarpageBodyTrends {
+            id
+            primary {
+              key_number_title {
+                text
+              }
+              key_numbers_intro {
+                text
+              }
             }
-            key_numbers_intro {
-              text
-            }
-          }
-          items {
-            key_number {
-              text
-            }
-            key_number_details {
-              text
+            items {
+              key_number {
+                text
+              }
+              key_number_details {
+                text
+              }
             }
           }
         }
@@ -119,29 +124,17 @@ export const pageQuery = graphql`
           feature_title {
             text
           }
-          feature_partners {
-            localFile {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
-              }
-            }
-          }
+
           feature_label {
             text
           }
           feature_image {
-            localFile {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
-              }
+            fluid {
+              ...GatsbyPrismicImageFluid
             }
           }
           feature_description {
-            text
+            raw
           }
         }
         features_title {

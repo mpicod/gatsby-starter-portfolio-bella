@@ -27,6 +27,7 @@ import Nav from "../components/nav";
 const IndexPage = ({ data: { caseStudies, homePage } }) => {
   const { edges } = caseStudies;
   const { data } = homePage;
+  console.log("HomeDATA", data);
   return (
     <Layout>
       <Nav></Nav>
@@ -138,21 +139,6 @@ export const pageQuery = graphql`
         node {
           uid
           data {
-            header_image {
-              localFile {
-                childImageSharp {
-                  fluid(
-                    maxWidth: 900
-                    maxHeight: 900
-                    quality: 90
-                    traceSVG: { color: "#021212" }
-                    cropFocus: ENTROPY
-                  ) {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                  }
-                }
-              }
-            }
             title {
               text
             }
@@ -169,18 +155,8 @@ export const pageQuery = graphql`
           ... on PrismicHomepageBodyCarousel {
             primary {
               featured_image {
-                localFile {
-                  childImageSharp {
-                    fluid(
-                      maxWidth: 900
-                      maxHeight: 900
-                      quality: 90
-                      traceSVG: { color: "#021212" }
-                      cropFocus: ENTROPY
-                    ) {
-                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                    }
-                  }
+                fluid {
+                  ...GatsbyPrismicImageFluid
                 }
               }
             }
@@ -200,18 +176,8 @@ export const pageQuery = graphql`
                 text
               }
               portrait_author {
-                localFile {
-                  childImageSharp {
-                    fluid(
-                      maxWidth: 900
-                      maxHeight: 900
-                      quality: 90
-                      traceSVG: { color: "#021212" }
-                      cropFocus: ENTROPY
-                    ) {
-                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                    }
-                  }
+                fluid {
+                  ...GatsbyPrismicImageFluid
                 }
               }
               name_of_the_author {
@@ -246,7 +212,7 @@ export const pageQuery = graphql`
         }
         missions {
           mission_text {
-            text
+            raw
           }
           mission_title1 {
             text

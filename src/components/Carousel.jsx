@@ -84,10 +84,7 @@ export default class SimpleSlider extends React.Component {
             />
             {this.props.data.primary.featured_image && (
               <Img
-                fluid={
-                  this.props.data.primary.featured_image.localFile
-                    .childImageSharp.fluid
-                }
+                fluid={this.props.data.primary.featured_image.fluid}
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />
             )}
