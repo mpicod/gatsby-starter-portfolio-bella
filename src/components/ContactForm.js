@@ -68,7 +68,7 @@ export default () => {
   return (
     <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <div className="">
-        <div
+        {/* <div
           className="mt-8 text-base leading-6 font-semibold uppercase tracking-wider text-primary-300"
           data-sal="slide-up"
           data-sal-delay="300"
@@ -76,7 +76,7 @@ export default () => {
           data-sal-duration="500"
         >
           Commencez maintenant
-        </div>
+        </div> */}
         <h2
           className="mt-2 text-gray-900 text-3xl leading-9 font-bold tracking-tight sm:text-4xl sm:leading-10"
           data-sal="slide-up"
@@ -130,7 +130,7 @@ export default () => {
             >
               {!status.submitting ? (
                 !status.submitted ? (
-                  "Envoyer le message!"
+                  "Envoyez le message!"
                 ) : (
                   <img src={Check} className="sent-check" />
                 )

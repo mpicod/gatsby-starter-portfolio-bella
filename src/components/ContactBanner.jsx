@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ContactForm from "./ContactForm";
+import { Date, Link, RichText } from "prismic-reactjs";
 
 export default class ContactBanner extends Component {
   render() {
@@ -12,12 +13,13 @@ export default class ContactBanner extends Component {
                 Commencez maintenant
               </h2> */}
               <p className="mt-2 text-3xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
-                Contactez-nous !
+                {this.props.data.title}
               </p>
               <p className="mt-2 text-xl leading-7 text-gray-300">
-                ZenOps et ses experts se tiennent à votre disposition pour
+                {/* ZenOps et ses experts se tiennent à votre disposition pour
                 répondre à vos demandes ! N'hésitez pas à nous laisser un
-                message et nous reviendrons vers vous rapidement.
+                message et nous reviendrons vers vous rapidement. */}
+                <RichText render={this.props.data.desc} />
               </p>
             </div>
           </div>
@@ -28,44 +30,43 @@ export default class ContactBanner extends Component {
             <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-md mx-auto lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 items-start">
                 <div className="rounded-lg shadow-lg overflow-hidden">
-                  <div className="px-6 py-8 bg-white sm:p-10 sm:pb-6 bg-img">
-                    <div>
-                      <span className="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide bg-gray-200 text-primary-600">
-                        ZenOps paris
-                      </span>
+                  {this.props.data.map(d => (
+                    <div className="px-6 py-8 bg-white sm:p-10 sm:pb-6 bg-img">
+                      <div>
+                        <span
+                          itemprop="name"
+                          className="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide bg-gray-200 text-primary-600"
+                        >
+                          {d.adress_label.text}
+                        </span>
+                      </div>
+                      <div className="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
+                        <span className="ml-1 text-2xl leading-8 font-medium text-gray-900">
+                          <RichText render={d.adress_details.raw} />
+                        </span>
+                      </div>
+                      <div
+                        itemscope
+                        itemtype="https://schema.org/LocalBusiness"
+                      >
+                        <span
+                          itemprop="telephone"
+                          className="mt-5 text-lg leading-7 text-gray-500 hover:text-primary-900"
+                        >
+                          <a href={`tel:+${d.telephone.text}`}>
+                            {d.telephone.text}
+                          </a>
+                        </span>
+                      </div>
                     </div>
-                    <div className="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
-                      <span className="ml-1 text-2xl leading-8 font-medium text-gray-900">
-                        1 Place de la Pyramide, 92911 Puteaux
-                      </span>
-                    </div>
-                    <p className="mt-5 text-lg leading-7 text-gray-500">
-                      01 45 06 24 14
-                    </p>
-                  </div>
-                  <div className="px-6 py-8 bg-white sm:p-10 sm:pb-6 bg-img">
-                    <div>
-                      <span className="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide bg-gray-200 text-primary-600">
-                        ZenOps Valence
-                      </span>
-                    </div>
-                    <div className="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
-                      <span className="ml-1 text-2xl leading-8 font-medium text-gray-900">
-                        NetOnline, bâtiment LE CRYSVAL 5, Avenue de la Gare
-                        26300 Alixan
-                      </span>
-                    </div>
-                    <p className="mt-5 text-lg leading-7 text-gray-500">
-                      01 45 06 24 14
-                    </p>
-                  </div>
+                  ))}
+
                   <div className="px-6 pt-6 pb-8 bg-gray-100 sm:p-10 sm:pt-6"></div>
                 </div>
                 <div className="mt-4 rounded-lg shadow-lg overflow-hidden lg:mt-0 self-stretch">
                   <div className="bg-gray-100 sm:p-10 p-8 h-full">
                     <ContactForm></ContactForm>
                   </div>
-                  {/* <div className="px-6 pt-6 pb-8 bg-gray-100 sm:p-10 sm:pt-6"></div> */}
                 </div>
               </div>
             </div>

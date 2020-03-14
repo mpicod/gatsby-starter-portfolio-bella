@@ -35,19 +35,15 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
       <Carousel data={data.body[1]}></Carousel>
       <Mission title={data.mission_title} data={data.missions} />
       <Pillars pillars={data.pillar_group} title={data.pillar_title.text} />
-      <Testimonial
-        Quote={
-          "ZenOps360 est une équipe vraiment top ! Nous avons ré-achitecturé toute l'infrastructure de notre base de donnée sensible, sans aucun problème et en un temps record grace à eux !"
-        }
-        Name={"Jean-Yves"}
-        Job={"CEO of MyCompany"}
-        Logo={Testimony}
-        data={data.body[0]}
-      />
+      <Testimonial data={data.body[0]} />
 
-      <ContactBanner />
+      <ContactBanner
+        title={data.contact_title.text}
+        desc={data.contact_description.raw}
+        data={data.adresses}
+      />
       <Logos></Logos>
-      <Footer />
+      <Footer title={data.title.text} />
     </Layout>
   );
 };
@@ -112,6 +108,11 @@ export const pageQuery = graphql`
                   ...GatsbyPrismicImageFluid
                 }
               }
+              testimonial_logo {
+                fluid {
+                  ...GatsbyPrismicImageFluid
+                }
+              }
               name_of_the_author {
                 text
               }
@@ -152,6 +153,23 @@ export const pageQuery = graphql`
         }
         mission_title {
           text
+        }
+        contact_title {
+          text
+        }
+        contact_description {
+          raw
+        }
+        adresses {
+          adress_details {
+            raw
+          }
+          adress_label {
+            text
+          }
+          telephone {
+            text
+          }
         }
       }
     }
