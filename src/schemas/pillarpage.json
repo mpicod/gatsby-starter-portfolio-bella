@@ -127,6 +127,32 @@
                 }
               }
             }
+          },
+          "banniere_logos": {
+            "type": "Slice",
+            "fieldset": "Bannière Logos",
+            "description": "Logos partenaire, 6 items",
+            "icon": "business_center",
+            "display": "list",
+            "non-repeat": {
+              "partners_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Partners Title"
+                }
+              }
+            },
+            "repeat": {
+              "partner_logo": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Partner Logo"
+                }
+              }
+            }
           }
         }
       }

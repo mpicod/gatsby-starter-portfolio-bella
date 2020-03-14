@@ -42,7 +42,10 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
         desc={data.contact_description.raw}
         data={data.adresses}
       />
-      <Logos></Logos>
+      <Logos
+        title={data.body[2].primary.partners_title.text}
+        items={data.body[2].items}
+      ></Logos>
       <Footer title={data.title.text} />
     </Layout>
   );
@@ -118,6 +121,19 @@ export const pageQuery = graphql`
               }
             }
             slice_type
+          }
+          ... on PrismicHomepageBodyBanniereLogos {
+            primary {
+              partners_title {
+                text
+              }
+            }
+            items {
+              partner_logo {
+                url
+                alt
+              }
+            }
           }
         }
         title {

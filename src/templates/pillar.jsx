@@ -79,7 +79,10 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
       ))}
 
       <Video></Video>
-      <Logos></Logos>
+      <Logos
+        title={data.body[1].primary.partners_title.text}
+        items={data.body[1].items}
+      ></Logos>
       <Footer />
     </Layout>
   );
@@ -109,6 +112,19 @@ export const pageQuery = graphql`
               }
               key_number_details {
                 text
+              }
+            }
+          }
+          ... on PrismicPillarpageBodyBanniereLogos {
+            primary {
+              partners_title {
+                text
+              }
+            }
+            items {
+              partner_logo {
+                url
+                alt
               }
             }
           }
