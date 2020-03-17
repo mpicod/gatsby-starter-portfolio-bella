@@ -15,7 +15,7 @@ export default class ContactBanner extends Component {
               <p className="mt-2 text-3xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
                 {this.props.title}
               </p>
-              <p className="mt-2 text-xl leading-7 text-gray-300">
+              <p className="mt-2 text-xl leading-7 text-gray-300 richtext">
                 {/* ZenOps et ses experts se tiennent à votre disposition pour
                 répondre à vos demandes ! N'hésitez pas à nous laisser un
                 message et nous reviendrons vers vous rapidement. */}
@@ -41,7 +41,7 @@ export default class ContactBanner extends Component {
                         </span>
                       </div>
                       <div className="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
-                        <span className="ml-1 text-2xl leading-8 font-medium text-gray-900">
+                        <span className="ml-1 text-2xl leading-8 font-medium text-gray-900 richtext">
                           <RichText render={d.adress_details.raw} />
                         </span>
                       </div>

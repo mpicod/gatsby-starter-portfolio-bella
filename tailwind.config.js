@@ -5,15 +5,15 @@ module.exports = {
       // Adds a new breakpoint in addition to the default breakpoints
       colors: {
         primary: {
-          100: "#5AD94C",
-          200: "#5AD94C",
-          300: "#5AD94C",
-          400: "#5AD94C",
-          500: "#5AD94C",
-          600: "#5AD94C",
-          700: "#5AD94C",
-          800: "#5AD94C",
-          900: "#5AD94C"
+          100: "#3ab97a",
+          200: "#3ab97a",
+          300: "#3ab97a",
+          400: "#3ab97a",
+          500: "#3ab97a",
+          600: "#3ab97a",
+          700: "#3ab97a",
+          800: "#3ab97a",
+          900: "#3ab97a"
         }
       }
     }

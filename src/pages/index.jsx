@@ -36,7 +36,6 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
       <Mission title={data.mission_title} data={data.missions} />
       <Pillars pillars={data.pillar_group} title={data.pillar_title.text} />
       <Testimonial data={data.body[0]} />
-
       <ContactBanner
         title={data.contact_title.text}
         desc={data.contact_description.raw}

@@ -65,3 +65,20 @@ body {
 //   background-size: cover;
 //   background-repeat: no-repeat;
 // }
+
+.richtext {
+  ol,
+  ul {
+    list-style: disc;
+    margin: unset;
+  }
+  ul {
+    margin-left: 1.45rem;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+}

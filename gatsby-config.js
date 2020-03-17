@@ -43,7 +43,7 @@ module.exports = {
         },
         shouldDownloadImage: ({ node, key, value }) => {
           // Return true to download the image or false to skip.
-          return true;
+          return false;
         }
       }
     },

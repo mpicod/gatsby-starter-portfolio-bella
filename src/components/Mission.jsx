@@ -51,7 +51,7 @@ export default class Mission extends Component {
                           <h5 className="text-lg leading-6 font-medium text-gray-900">
                             {m.mission_title1.text}
                           </h5>
-                          <p className="mt-2 text-base leading-6 text-gray-500">
+                          <p className="mt-2 text-base leading-6 text-gray-500 richtext">
                             <RichText render={m.mission_text.raw} />
                             {/* {console.log("missions", m.mission_text)} */}
                           </p>

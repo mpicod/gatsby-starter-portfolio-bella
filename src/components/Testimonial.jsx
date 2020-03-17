@@ -63,8 +63,13 @@ export default class Testimonial extends Component {
             />
 
             <blockquote className="mt-8">
-              <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
-                {/* <p>{this.props.Quote}</p> */}
+              <div
+                data-sal="slide-up"
+                data-sal-delay="300"
+                data-sal-easing="ease-in-out"
+                data-sal-duration="500"
+                className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900"
+              >
                 {this.props.data.primary.quote.text}
               </div>
               <footer className="mt-8">
@@ -108,7 +113,6 @@ export default class Testimonial extends Component {
                     >
                       {this.props.data.primary.name_of_the_author.text}
                     </div> */}
-                    {console.log("TESTIMONIAL", this.props.data)}
                   </div>
                 </div>
               </footer>

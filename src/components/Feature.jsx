@@ -32,7 +32,7 @@ export default class Feature extends Component {
             {this.props.title}
           </h2>
           <p
-            className="mt-6 text-lg leading-7 text-gray-500"
+            className="mt-6 text-lg leading-7 text-gray-500 richtext"
             data-sal="slide-up"
             data-sal-delay="300"
             data-sal-easing="ease-in-out"
