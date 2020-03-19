@@ -3,7 +3,7 @@ module.exports = {
 
   siteTitle: "ZenOps", // Navigation and Site Title
   siteTitleAlt: "ZenOps", // Alternative Site title for SEO
-  siteUrl: "https//:zenops.fr", // Domain of your site. No trailing slash!
+  siteUrl: "https://zenops.fr", // Domain of your site. No trailing slash!
   siteLanguage: "fr", // Language Tag on <html> element
   siteLogo: "/logos/ms-icon-310x310.png", // Used for SEO and manifest
   siteDescription: "ZenOps company website",
