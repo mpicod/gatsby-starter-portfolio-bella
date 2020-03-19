@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Logo from "../images/logo_zenops.svg";
+import Logo from "../images/logo_zenops_large_white.svg";
 
 const Footer = ({ isCase }) => {
   const year = new Date().getFullYear();
@@ -183,7 +183,7 @@ const Footer = ({ isCase }) => {
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8">
           <p className="text-base leading-6 text-gray-400 xl:text-center">
-            &copy; 2020 ZenOps360, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} ZenOps, Tous droits réservés.
           </p>
         </div>
       </div>

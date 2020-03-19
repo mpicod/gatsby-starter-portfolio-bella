@@ -40,8 +40,8 @@ export default class ContactBanner extends Component {
                           {d.adress_label.text}
                         </span>
                       </div>
-                      <div className="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
-                        <span className="ml-1 text-2xl leading-8 font-medium text-gray-900 richtext">
+                      <div className="mt-4 flex items-baseline leading-none font-extrabold">
+                        <span className="ml-1 text-xl leading-8 font-medium text-gray-900 richtext">
                           <RichText render={d.adress_details.raw} />
                         </span>
                       </div>

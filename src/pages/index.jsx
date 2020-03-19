@@ -20,16 +20,16 @@ import Secure from "../images/secure.svg";
 
 import Saltstack from "../images/ss.svg";
 import Testimony from "../images/profil.png";
-
+import TopBanner from "../components/TopBanner";
 import Nav from "../components/nav";
 // import "../style/custom.scss";
 
 const IndexPage = ({ data: { caseStudies, homePage } }) => {
   const { edges } = caseStudies;
   const { data } = homePage;
-  console.log("HomeDATA", data);
   return (
     <Layout>
+      {/* <TopBanner /> */}
       <Nav></Nav>
       <Hero title={data.title.text} description={data.page_subtitle.text} />
       <Carousel data={data.body[1]}></Carousel>
@@ -96,6 +96,9 @@ export const pageQuery = graphql`
               }
               carousel_description {
                 text
+              }
+              carousel_link {
+                url
               }
             }
             slice_type

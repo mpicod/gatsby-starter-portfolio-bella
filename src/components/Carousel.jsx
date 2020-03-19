@@ -70,7 +70,7 @@ export default class SimpleSlider extends React.Component {
         style={{ minHeight: 0, minWidth: "0" }}
       >
         <div
-          className="relative rounded-lg block md:flex items-center bg-gray-100 shadow-xl"
+          className="relative rounded-lg block md:flex items-center bg-gray-200 shadow-xl"
           style={{ minHeight: "19rem", marginTop: "-15em" }}
         >
           <div
@@ -100,7 +100,7 @@ export default class SimpleSlider extends React.Component {
             </div>
           </div>
 
-          <div className="w-full md:w-3/5 h-full items-center bg-gray-100 rounded-lg">
+          <div className="w-full md:w-3/5 h-full items-center bg-gray-200 rounded-lg">
             <Slider {...settings}>
               {this.props.data.items.map(i => (
                 <div>
@@ -113,16 +113,20 @@ export default class SimpleSlider extends React.Component {
                         {i.carousel_description.text}
                       </span>
                     </p>
-                    <a
-                      className="flex items-baseline mt-3 text-primary-600 hover:text-primary-900 focus:text-primary-900"
-                      href=""
-                    >
-                      <span>En savoir plus</span>
-                      <span className="text-xs ml-1">&#x279c;</span>
-                    </a>
+                    {i.carousel_link.url ? (
+                      <a
+                        className="flex items-baseline mt-3 text-primary-600 hover:text-primary-900 focus:text-primary-900"
+                        href={i.carousel_link.url}
+                      >
+                        <span>En savoir plus</span>
+                        <span className="text-xs ml-1">&#x279c;</span>
+                      </a>
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <svg
-                    className="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-gray-100 -ml-12"
+                    className="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-gray-200 -ml-12"
                     viewBox="0 0 100 100"
                     preserveAspectRatio="none"
                   >

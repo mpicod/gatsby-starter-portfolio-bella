@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="130" height="130" viewBox="0 0 130 130">
+  <defs>
+    <filter id="Rectangle_318" x="0" y="0" width="130" height="130" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="logo_zenops_small" transform="translate(-659 -358)">
+    <g transform="matrix(1, 0, 0, 1, 659, 358)" filter="url(#Rectangle_318)">
+      <rect id="Rectangle_318-2" data-name="Rectangle 318" width="112" height="112" rx="10" transform="translate(9 6)" fill="#1a202c"/>
+    </g>
+    <g id="Groupe_827" data-name="Groupe 827" transform="translate(200.908 188.958)">
+      <path id="Tracé_1074" data-name="Tracé 1074" d="M495.958,247.1l25.4-30.718h-24.7v-7.664h34.772v6.587l-24.575,30.719h24.765v7.664H495.958Z" transform="translate(0 0.001)" fill="#3ab97a"/>
+      <g id="Groupe_824" data-name="Groupe 824" transform="translate(507.57 208.722)">
+        <path id="Tracé_1075" data-name="Tracé 1075" d="M507.442,220.635a12.321,12.321,0,0,1-1.191-1.2,14.761,14.761,0,0,1-2.141-3.813l-4.011,5.016Z" transform="translate(-494.226 -186.496)" fill="#f7fafc"/>
+        <path id="Tracé_1076" data-name="Tracé 1076" d="M520.1,222.715a24.059,24.059,0,0,0-4.434-7.347,22.245,22.245,0,0,0-6.874-5.227,18.883,18.883,0,0,0-3.682-1.339v7.36l0,.95c.236.1-.089-.055.144.059a12.385,12.385,0,0,1,4.113,3.327,15.346,15.346,0,0,1,2.6,4.809,17.562,17.562,0,0,1,.92,5.637,17.855,17.855,0,0,1-.857,5.481,15.4,15.4,0,0,1-2.533,4.847,12.7,12.7,0,0,1-4.113,3.45l-.076.029v8.192a19.726,19.726,0,0,0,3.209-1.064,21.908,21.908,0,0,0,6.967-5,23.377,23.377,0,0,0,4.56-7.22,22.728,22.728,0,0,0,1.647-8.58A23.117,23.117,0,0,0,520.1,222.715Z" transform="translate(-478.087 -208.463)" fill="#f7fafc"/>
+        <path id="Tracé_1077" data-name="Tracé 1077" d="M499.293,222.656h0l6.335-7.918h0Z" transform="translate(-496.823 -189.336)" fill="#f7fafc"/>
+        <path id="Tracé_1078" data-name="Tracé 1078" d="M501.655,211.287a24.221,24.221,0,0,0-1.567,3.036,22.635,22.635,0,0,0-1.381,5.5l7.056-8.534Z" transform="translate(-498.708 -200.455)" fill="#f7fafc"/>
+        <rect id="Rectangle_320" data-name="Rectangle 320" height="7.664" transform="translate(24.048 37.305)" fill="#f7fafc"/>
+        <path id="Tracé_1079" data-name="Tracé 1079" d="M504.988,215.309l-.825,1.031h0l.825-1.031v-6.587h0Z" transform="translate(-481.13 -208.722)" fill="#f7fafc"/>
+      </g>
+    </g>
+  </g>
+</svg>
