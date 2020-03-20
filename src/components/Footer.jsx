@@ -86,7 +86,9 @@ const Footer = ({ isCase }) => {
       <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="xl:col-span-1">
-            <img className="h-10" src={Logo} alt="Zenops 360" />
+            <a href="/">
+              <img className="h-10" src={Logo} alt="Zenops" />{" "}
+            </a>
             <p className="mt-8 text-gray-500 text-base leading-6">
               Les Ops en toute confiance.
             </p>
