@@ -8,41 +8,117 @@ import Hero from "../components/Hero";
 import Nav from "../components/nav";
 import Stats from "../components/Stats";
 import Feature from "../components/Feature";
+import RichTextColumn from "../components/RichTextColumn";
 
-const items = [
-  {
-    key_number: { text: "coucou" },
-    key_number_details: { text: "coucou" }
-  },
-  {
-    key_number: { text: "coucou" },
-    key_number_details: { text: "coucou" }
-  }
-];
-
-const AboutPage = () => {
-  //   const { data } = homePage;
+const AboutPage = ({ data: { prismicAboutpage } }) => {
+  const { data } = prismicAboutpage;
   return (
     <Layout>
       <Nav></Nav>
-      <Hero title={"About"} description={"Une histoire à partager"} />
-      <Stats title={"titre"} description={"desc"} items={items} />
-      <Logos
-      // title={data.body[1].primary.partners_title.text}
-      // items={data.body[1].items}
-      ></Logos>
-      {/* {data.features.map(f => ( */}
-      <Feature
-      //   title={f.feature_title.text}
-      //   desc={f.feature_description.raw}
-      //   label={f.feature_label.text}
-      //   img={f.feature_image}
-      // {...console.log(f.feature_image, "f.feature_image")}
+      <Hero
+        title={data.title.text}
+        description={data.about_description.text}
+        icon={data.pillar_icon}
       />
-      {/* ))} */}
-      <Footer title={"title"} />
+      <Stats
+        title={data.body[1].primary.key_number_title.text}
+        description={data.body[1].primary.key_numbers_intro.text}
+        items={data.body[1].items}
+      />
+
+      <RichTextColumn content={data.main_content} />
+      <Logos
+        title={data.body[0].primary.partners_title.text}
+        items={data.body[0].items}
+      ></Logos>
+      {data.features &&
+        data.features.map(f => (
+          <Feature
+            title={f.feature_title.text}
+            desc={f.feature_description.raw}
+            label={f.feature_label.text}
+            img={f.feature_image}
+            {...console.log(f.feature_image, "f.feature_image")}
+          />
+        ))}
+      <Footer title={"Les Ops en toute confiance"} />
     </Layout>
   );
 };
 
 export default AboutPage;
+
+export const pageQuery = graphql`
+  query AboutQuery {
+    prismicAboutpage {
+      uid
+      data {
+        about_description {
+          raw
+        }
+        features_title {
+          text
+        }
+        features {
+          feature_description {
+            raw
+          }
+          feature_image {
+            fluid {
+              ...GatsbyPrismicImageFluid
+            }
+          }
+          feature_label {
+            text
+          }
+          feature_title {
+            text
+          }
+        }
+        body {
+          ... on PrismicAboutpageBodyTrends {
+            items {
+              key_number {
+                text
+              }
+              key_number_details {
+                text
+              }
+            }
+            primary {
+              key_number_title {
+                text
+              }
+              key_numbers_intro {
+                text
+              }
+            }
+          }
+          ... on PrismicAboutpageBodyBanniereLogos {
+            id
+            items {
+              partner_logo {
+                url
+                alt
+              }
+            }
+            primary {
+              partners_title {
+                text
+              }
+            }
+          }
+        }
+        main_content {
+          raw
+        }
+        title {
+          text
+        }
+        video {
+          url
+        }
+      }
+    }
+  }
+`;
