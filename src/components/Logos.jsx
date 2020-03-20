@@ -12,7 +12,7 @@ export default class Logos extends Component {
           <p className="text-center text-base leading-6 font-semibold text-gray-600 tracking-wider">
             {this.props.title && this.props.title}
           </p>
-          <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8 flex flex-wrap items-center justify-center">
+          <div className="mt-6 grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8 flex flex-wrap items-center justify-center">
             {console.log("logos", this.props.items)}
             {this.props.items?.map(i => (
               <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 partner-logo">
