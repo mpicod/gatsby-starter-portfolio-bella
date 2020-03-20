@@ -7,20 +7,12 @@ import Layout from "../components/Layout";
 import Testimonial from "../components/Testimonial";
 import Logos from "../components/Logos";
 import ContactBanner from "../components/ContactBanner";
-import ContactForm from "../components/ContactForm";
+
 import Carousel from "../components/Carousel";
 import Pillars from "../components/Pillars";
 import Hero from "../components/Hero";
 import Mission from "../components/Mission";
 
-import Moderniser from "../images/moderniser.svg";
-import Simplify from "../images/simplify.svg";
-
-import Secure from "../images/secure.svg";
-
-import Saltstack from "../images/ss.svg";
-import Testimony from "../images/profil.png";
-import TopBanner from "../components/TopBanner";
 import Nav from "../components/nav";
 // import "../style/custom.scss";
 

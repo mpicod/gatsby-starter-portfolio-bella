@@ -12,7 +12,7 @@ export default class Video extends Component {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/CyZ-V7y6_AM"
+            src={this.props.video.url}
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen

@@ -13,7 +13,7 @@ export default class Stats extends Component {
               data-sal-easing="ease-in-out"
               data-sal-duration="500"
             >
-              {this.props.title}
+              {this.props.title && this.props.title}
             </h2>
             <p
               className="mt-3 text-xl leading-7 text-gray-500 sm:mt-4"
@@ -22,7 +22,7 @@ export default class Stats extends Component {
               data-sal-easing="ease-in-out"
               data-sal-duration="500"
             >
-              {this.props.description}
+              {this.props.description && this.props.description}
             </p>
           </div>
         </div>
@@ -32,34 +32,37 @@ export default class Stats extends Component {
             <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto">
                 <div className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                  {this.props.items.map(i => (
-                    <div
-                      className="border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
-                      // data-sal="slide-up"
-                      // data-sal-delay="300"
-                      // data-sal-easing="ease-in-out"
-                      // data-sal-duration={500 + i * 100}
-                    >
-                      <p
-                        className="text-5xl leading-none font-extrabold text-primary-600"
-                        data-sal="slide-up"
-                        data-sal-delay={300 + i * 100}
-                        data-sal-easing="ease-in-out"
-                        data-sal-duration="500"
-                      >
-                        {i.key_number.text}
-                      </p>
-                      <p
-                        className="mt-2 text-lg leading-6 font-medium text-gray-500"
-                        data-sal="slide-up"
-                        data-sal-delay={300 + i * 100}
-                        data-sal-easing="ease-in-out"
-                        data-sal-duration="500"
-                      >
-                        {i.key_number_details.text}
-                      </p>
-                    </div>
-                  ))}
+                  {this.props.items &&
+                    this.props.items.map(i => {
+                      return (
+                        <div
+                          className="border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
+                          // data-sal="slide-up"
+                          // data-sal-delay="300"
+                          // data-sal-easing="ease-in-out"
+                          // data-sal-duration={500 + i * 100}
+                        >
+                          <p
+                            className="text-5xl leading-none font-extrabold text-primary-600"
+                            data-sal="slide-up"
+                            data-sal-delay={300 + i * 100}
+                            data-sal-easing="ease-in-out"
+                            data-sal-duration="500"
+                          >
+                            {i.key_number.text}
+                          </p>
+                          <p
+                            className="mt-2 text-lg leading-6 font-medium text-gray-500"
+                            data-sal="slide-up"
+                            data-sal-delay={300 + i * 100}
+                            data-sal-easing="ease-in-out"
+                            data-sal-duration="500"
+                          >
+                            {i.key_number_details.text}
+                          </p>
+                        </div>
+                      );
+                    })}
                 </div>
               </div>
             </div>

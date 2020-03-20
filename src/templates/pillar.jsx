@@ -4,16 +4,14 @@ import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 import Nav from "../components/nav";
 import Stats from "../components/Stats";
-import Saltstack from "../images/ss.svg";
-import PartnersBanner from "../components/PartnersBanner";
+
 import Hero from "../components/Hero";
 import Logos from "../components/Logos";
 import Feature from "../components/Feature";
 import Video from "../components/Video";
 
 import "../style/custom.scss";
-import Secure from "../images/secure.svg";
-import Img from "gatsby-image";
+
 import { Date, Link, RichText } from "prismic-reactjs";
 
 const PillarPage = ({ data: { prismicPillarpage } }) => {
@@ -77,8 +75,8 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
           // {...console.log(f.feature_image, "f.feature_image")}
         />
       ))}
+      {/* {data.video.url ? <Video></Video> : ""} */}
 
-      <Video></Video>
       <Logos
         title={data.body[1].primary.partners_title.text}
         items={data.body[1].items}

@@ -82,3 +82,8 @@ body {
     padding-top: 0;
   }
 }
+
+.partner-logo {
+  flex: 0 0 calc(16.66% - 20px);
+  min-width: 200px;
+}

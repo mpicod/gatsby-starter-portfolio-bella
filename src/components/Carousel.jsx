@@ -77,11 +77,11 @@ export default class SimpleSlider extends React.Component {
             className="relative w-full md:w-2/5 h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg"
             style={{ minHeight: "19rem" }}
           >
-            <img
+            {/* <img
               className="absolute inset-0 w-full h-full object-cover object-center "
               src={this.props}
               alt=""
-            />
+            /> */}
             {this.props.data.primary.featured_image && (
               <Img
                 fluid={this.props.data.primary.featured_image.fluid}
