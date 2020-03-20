@@ -66,6 +66,9 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
           </div>
         ))}
       </section> */}
+      <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mb-16">
+        {data.features_title.text}
+      </h2>
       {data.features.map(f => (
         <Feature
           title={f.feature_title.text}

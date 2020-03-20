@@ -12,7 +12,7 @@ export default class Feature extends Component {
           )}
         </div> */}
 
-        <div className="w-full md:w-1/2 pb-8 px-6">
+        <div className="w-full md:w-1/2 py-8 px-6 flex flex-col justify-center ">
           <div
             className="flex items-center font-bold rounded-md text-primary-900"
             data-sal="slide-up"
