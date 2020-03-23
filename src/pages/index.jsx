@@ -22,13 +22,13 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
   const { edges } = caseStudies;
   const { data } = homePage;
 
-  const redirect = useQueryParam("redirect", ""); // key, defaultValue
-  console.log(redirect); // log query param
-  // console.log(getSearchParams()); // Log all parameters
+  // const redirect = useQueryParam("redirect", ""); // key, defaultValue
+  // console.log(redirect); // log query param
+  // // console.log(getSearchParams()); // Log all parameters
 
   return (
     <Layout>
-      {redirect ? <TopBanner /> : ""}
+      {/* {redirect ? <TopBanner /> : ""} */}
 
       <Nav isHome></Nav>
       <Hero
