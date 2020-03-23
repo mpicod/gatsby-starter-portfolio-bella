@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useQueryParam, getSearchParams } from "gatsby-query-params";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Footer from "../components/Footer";
@@ -7,6 +8,7 @@ import Layout from "../components/Layout";
 import Testimonial from "../components/Testimonial";
 import Logos from "../components/Logos";
 import ContactBanner from "../components/ContactBanner";
+import TopBanner from "../components/TopBanner";
 
 import Carousel from "../components/Carousel";
 import Pillars from "../components/Pillars";
@@ -19,15 +21,32 @@ import Nav from "../components/nav";
 const IndexPage = ({ data: { caseStudies, homePage } }) => {
   const { edges } = caseStudies;
   const { data } = homePage;
+
+  const redirect = useQueryParam("redirect", ""); // key, defaultValue
+  console.log(redirect); // log query param
+  // console.log(getSearchParams()); // Log all parameters
+
   return (
     <Layout>
-      {/* <TopBanner /> */}
-      <Nav></Nav>
-      <Hero title={data.title.text} description={data.page_subtitle.text} />
+      {redirect ? <TopBanner /> : ""}
+
+      <Nav isHome></Nav>
+      <Hero
+        title={data.title.text}
+        description={data.page_subtitle.text}
+        isHome
+      />
       <Carousel data={data.body[1]}></Carousel>
-      <Mission title={data.mission_title} data={data.missions} />
+      <Mission
+        title={data.mission_title}
+        data={data.missions}
+        know_how_title={data.know_how_title}
+        description_know_how={data.description_know_how}
+        philosophy_title={data.philosophy_title}
+        philosophy_description={data.philosophy_description}
+      />
       <Pillars pillars={data.pillar_group} title={data.pillar_title.text} />
-      <Testimonial data={data.body[0]} />
+      {/* <Testimonial data={data.body[0]} /> */}
       <ContactBanner
         title={data.contact_title.text}
         desc={data.contact_description.raw}
@@ -160,9 +179,24 @@ export const pageQuery = graphql`
           mission_title1 {
             text
           }
+          mission_icon {
+            url
+          }
         }
         mission_title {
           text
+        }
+        know_how_title {
+          text
+        }
+        description_know_how {
+          raw
+        }
+        philosophy_title {
+          text
+        }
+        philosophy_description {
+          raw
         }
         contact_title {
           text

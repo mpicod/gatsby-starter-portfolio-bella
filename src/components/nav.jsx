@@ -16,7 +16,7 @@ const SimpleLink = props => (
   </li>
 );
 
-const Nav = () => {
+const Nav = ({ isHome }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -125,7 +125,7 @@ const Nav = () => {
           {console.log("navData", data)}
           <div className="relative bg-white overflow-hidden">
             <div className="hidden lg:block lg:absolute lg:inset-0">
-              <img src={Logo} />
+              <img src={Logo} alt="zenops logo" />
             </div>
           </div>
           <div className="relative pt-6 pb-16 md:pb-16 lg:pb-20 xl:pb-24">
@@ -202,7 +202,7 @@ const Nav = () => {
                 <span className="inline-flex rounded-md shadow-md transform hover:-translate-y-1 transition duration-300">
                   <span className="inline-flex ">
                     <a
-                      href="#contactSection"
+                      href={isHome ? "#contact" : "/#contact"}
                       className=" inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-100 hover:bg-gray-50 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
                     >
                       Contactez-nous !

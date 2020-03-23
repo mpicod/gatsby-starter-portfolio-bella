@@ -22,6 +22,34 @@
         "label": "Page subtitle"
       }
     },
+    "know_how_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "Titre Savoir faire"
+      }
+    },
+    "description_know_how": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Description Savoir Faire"
+      }
+    },
+    "philosophy_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "Titre Philosophie"
+      }
+    },
+    "philosophy_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Description Philosophie"
+      }
+    },
     "mission_title": {
       "type": "StructuredText",
       "config": {
@@ -33,6 +61,14 @@
       "type": "Group",
       "config": {
         "fields": {
+          "mission_icon": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "mission_icon"
+            }
+          },
           "mission_text": {
             "type": "StructuredText",
             "config": {

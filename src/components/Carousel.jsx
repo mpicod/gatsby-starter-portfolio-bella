@@ -71,7 +71,7 @@ export default class SimpleSlider extends React.Component {
       >
         <div
           className="relative rounded-lg block md:flex items-center bg-gray-200 shadow-xl"
-          style={{ minHeight: "19rem", marginTop: "-15em" }}
+          style={{ minHeight: "19rem", marginTop: "-10em" }}
         >
           <div
             className="relative w-full md:w-2/5 h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg"
