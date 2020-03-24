@@ -17,7 +17,7 @@ const AboutPage = ({ data: { prismicAboutpage } }) => {
       <Nav></Nav>
       <Hero
         title={data.title.text}
-        description={data.about_description.text}
+        description={data.about_description.raw}
         icon={data.pillar_icon}
       />
       <Stats
@@ -31,6 +31,9 @@ const AboutPage = ({ data: { prismicAboutpage } }) => {
         title={data.body[0].primary.partners_title.text}
         items={data.body[0].items}
       ></Logos>
+      <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mb-16 mt-16">
+        {data.features_title.text}
+      </h2>
       {data.features &&
         data.features.map(f => (
           <Feature

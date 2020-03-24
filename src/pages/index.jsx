@@ -33,13 +33,14 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
       <Nav isHome></Nav>
       <Hero
         title={data.title.text}
-        description={data.page_subtitle.text}
+        description={data.page_subtitle.raw}
         isHome
       />
       <Carousel data={data.body[1]}></Carousel>
       <Mission
         title={data.mission_title}
         data={data.missions}
+        story={data.story_title}
         know_how_title={data.know_how_title}
         description_know_how={data.description_know_how}
         philosophy_title={data.philosophy_title}
@@ -170,7 +171,7 @@ export const pageQuery = graphql`
           }
         }
         page_subtitle {
-          text
+          raw
         }
         missions {
           mission_text {
@@ -184,6 +185,9 @@ export const pageQuery = graphql`
           }
         }
         mission_title {
+          text
+        }
+        story_title {
           text
         }
         know_how_title {

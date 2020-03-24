@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
-import Logo from "../images/logo_zenops_small.svg";
+import Logo from "../images/logo_zenops_large.svg";
 
 const SimpleLink = props => (
   <li className="nav-item active">
@@ -46,89 +46,16 @@ const Nav = ({ isHome }) => {
         }
       `}
       render={data => (
-        // <div className="container">
-        //   <nav className="navbar navbar-expand-lg">
-        //     {console.log(data)}
-        //     <a className="navbar-brand" href="/">
-        //       <img src={Logo} />
-        //     </a>
-        //     <button
-        //       className="navbar-toggler"
-        //       type="button"
-        //       data-toggle="collapse"
-        //       data-target="#navbarNavDropdown"
-        //       aria-controls="navbarNavDropdown"
-        //       aria-expanded="false"
-        //       aria-label="Toggle navigation"
-        //     >
-        //       <span className="navbar-toggler-icon"></span>
-        //     </button>
-        //     <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        //       <ul className="navbar-nav">
-        // {data.prismicLayout.data.nav.map(l => {
-        //   return l.primary.link ? (
-        //     <li className="nav-item active">
-        //       <a
-        //         className="nav-link"
-        //         // {...(l.primary.link ? { href: l.primary.link.url } : {})}
-        //         href={l.primary.link.url}
-        //         // {...(l.primary.link && { href: l.primary.link.url })}
-        //       >
-        //         {l.primary.label.text}
-        //       </a>
-        //     </li>
-        //   ) : (
-        //     <li className="nav-item dropdown text-white">
-        //       <a
-        //         className="nav-link dropdown-toggle"
-        //         id="navbarDropdownMenuLink"
-        //         role="button"
-        //         data-toggle="dropdown"
-        //         aria-haspopup="true"
-        //         aria-expanded="false"
-        //       >
-        //         {l.primary.label.text}
-        //       </a>
-        //       <div
-        //         className="dropdown-menu"
-        //         aria-labelledby="navbarDropdownMenuLink"
-        //       >
-        //         {l.items.map(i => (
-        //           <a
-        //             className="dropdown-item"
-        //             href={i.sub_nav_link.url}
-        //           >
-        //             {i.sub_nav_link_label.text}
-        //           </a>
-        //         ))}
-        //       </div>
-        //     </li>
-        //   );
-        // })}
-
-        //         <li className="nav-item">
-        //           <a className="nav-link" href="#">
-        //             <button
-        //               className="btn btn-primary"
-        //               type="button"
-        //               value="Input"
-        //             >
-        //               Contactez-nous !
-        //             </button>
-        //           </a>
-        //         </li>
-        //       </ul>
-        //     </div>
-        //   </nav>
-        // </div>
         <div>
-          {console.log("navData", data)}
-          <div className="relative bg-white overflow-hidden">
+          <div className="fixed bg-white overflow-hidden">
             <div className="hidden lg:block lg:absolute lg:inset-0">
               <img src={Logo} alt="zenops logo" />
             </div>
           </div>
-          <div className="relative pt-6 pb-16 md:pb-16 lg:pb-20 xl:pb-24">
+          <div
+            className="pt-6 fixed w-full bg-white pb-6"
+            style={{ zIndex: "99", top: "0" }}
+          >
             <nav className="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6">
               <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-auto">

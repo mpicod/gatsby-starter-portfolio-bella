@@ -24,9 +24,9 @@ export default class Pillars extends Component {
             {this.props.pillars.map(p => (
               <a
                 href={p.pillar_cta.url}
-                className="rounded bg-gray-900 shadow-lg transform hover:-translate-y-1 transition duration-300"
+                className="rounded bg-gray-900 shadow-lg transform hover:-translate-y-1 transition duration-300 "
               >
-                <div className="max-w-sm overflow-hidden sm:mt-5 text-white p-8 m-auto ">
+                <div className="max-w-sm overflow-hidden sm:mt-5 text-white p-8 m-auto bg-gray-900 mt-10">
                   <div className="flex items-center justify-center h-12 w-12 rounded-md text-white mx-6 my-4 ">
                     <img
                       src={p.pillar_icon.url}

@@ -30,7 +30,7 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
       </header> */}
       <Hero
         title={data.title.text}
-        description={data.pillar_description.text}
+        description={data.pillar_description.raw}
         icon={data.pillar_icon}
       />
       <Stats
@@ -134,7 +134,7 @@ export const pageQuery = graphql`
           text
         }
         pillar_description {
-          text
+          raw
         }
         features {
           feature_title {

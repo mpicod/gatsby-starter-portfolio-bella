@@ -45,7 +45,7 @@ export default class Mission extends Component {
 
             <div class="relative">
               <h3 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-                {this.props.title.text}
+                {this.props.story.text}
               </h3>
               {/* <p class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -84,7 +84,6 @@ export default class Mission extends Component {
                 >
                   {this.props.philosophy_title.text}
                 </h4>
-
                 <p
                   class="mt-3 text-lg leading-7 text-gray-500"
                   data-sal="slide-up"
@@ -138,7 +137,7 @@ export default class Mission extends Component {
               </div>
             </div>
           </div>
-          <div class="py-12 bg-white">
+          <div class="py-12 bg-gray-100 mt-10">
             <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
               <div className="relative">
                 <h3
@@ -154,7 +153,7 @@ export default class Mission extends Component {
               <div class="lg:grid lg:grid-cols-3 lg:gap-8">
                 {this.props.data.map(m => (
                   <div>
-                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white p-2">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white p-2 mt-10">
                       {/* <svg
                         class="h-6 w-6"
                         stroke="currentColor"
