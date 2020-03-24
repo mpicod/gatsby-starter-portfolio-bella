@@ -42,17 +42,17 @@ export default class Mission extends Component {
                 fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
               />
             </svg>
-            {/* 
+
             <div class="relative">
               <h3 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-                A better way to send money
+                {this.props.title.text}
               </h3>
-              <p class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
+              {/* <p class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Possimus magnam voluptatum cupiditate veritatis in, accusamus
                 quisquam.
-              </p>
-            </div> */}
+              </p> */}
+            </div>
 
             <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
               <div class="relative">
@@ -84,6 +84,7 @@ export default class Mission extends Component {
                 >
                   {this.props.philosophy_title.text}
                 </h4>
+
                 <p
                   class="mt-3 text-lg leading-7 text-gray-500"
                   data-sal="slide-up"
