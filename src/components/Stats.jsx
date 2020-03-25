@@ -8,7 +8,7 @@ export default class Stats extends Component {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2
-              className="text-3xl leading-9 font-bold text-primary-900 sm:text-4xl sm:leading-10"
+              className="text-3xl leading-9 font-bold text-primary-900 sm:text-4xl sm:leading-10 "
               data-sal="slide-up"
               data-sal-delay="300"
               data-sal-easing="ease-in-out"
@@ -17,7 +17,7 @@ export default class Stats extends Component {
               {this.props.title && this.props.title}
             </h2>
             <p
-              className="mt-3 text-xl leading-7 text-gray-500 sm:mt-4"
+              className="mt-3 text-xl leading-7 text-gray-500 sm:mt-4 richtext"
               data-sal="slide-up"
               data-sal-delay="300"
               data-sal-easing="ease-in-out"

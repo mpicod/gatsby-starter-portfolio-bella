@@ -66,7 +66,7 @@ export default class Mission extends Component {
                   {this.props.know_how_title.text}
                 </h4>
                 <p
-                  class="mt-3 text-lg leading-7 text-gray-500"
+                  class="mt-3 text-lg leading-7 text-gray-500 richtext"
                   data-sal="slide-up"
                   data-sal-delay="300"
                   data-sal-easing="ease-in-out"
@@ -85,7 +85,7 @@ export default class Mission extends Component {
                   {this.props.philosophy_title.text}
                 </h4>
                 <p
-                  class="mt-3 text-lg leading-7 text-gray-500"
+                  class="mt-3 text-lg leading-7 text-gray-500 richtext"
                   data-sal="slide-up"
                   data-sal-delay="300"
                   data-sal-easing="ease-in-out"
@@ -180,7 +180,7 @@ export default class Mission extends Component {
                         {m.mission_title1.text}
                       </h5>
                       <p
-                        class="mt-2 text-base leading-6 text-gray-500"
+                        class="mt-2 text-base leading-6 text-gray-500 richtext"
                         data-sal="slide-up"
                         data-sal-delay="300"
                         data-sal-easing="ease-in-out"

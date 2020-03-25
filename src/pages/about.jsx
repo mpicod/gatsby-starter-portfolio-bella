@@ -9,6 +9,7 @@ import Nav from "../components/nav";
 import Stats from "../components/Stats";
 import Feature from "../components/Feature";
 import RichTextColumn from "../components/RichTextColumn";
+import LargeImage from "../components/LargeImage";
 
 const AboutPage = ({ data: { prismicAboutpage } }) => {
   const { data } = prismicAboutpage;
@@ -27,10 +28,10 @@ const AboutPage = ({ data: { prismicAboutpage } }) => {
       />
 
       <RichTextColumn content={data.main_content} />
-      <Logos
+      <LargeImage
         title={data.body[0].primary.partners_title.text}
-        items={data.body[0].items}
-      ></Logos>
+        img={data.body[0].items}
+      ></LargeImage>
       <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mb-16 mt-16">
         {data.features_title.text}
       </h2>
