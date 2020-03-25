@@ -6,7 +6,7 @@ export default class Logos extends Component {
     return (
       <div className="bg-gray-900">
         <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-          <p className="text-center text-base leading-6 font-semibold text-gray-600 tracking-wider">
+          <p className="text-center text-3xl leading-6 font-semibold text-gray-600 tracking-wider">
             {this.props.title && this.props.title}
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center">

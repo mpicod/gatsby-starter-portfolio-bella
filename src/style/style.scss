@@ -81,6 +81,33 @@ body {
     padding-right: 0;
     padding-top: 0;
   }
+  h1 {
+    @apply text-5xl;
+    @apply font-semibold;
+  }
+  h2 {
+    @apply text-4xl;
+    @apply font-semibold;
+  }
+  h3 {
+    @apply text-3xl;
+    @apply font-semibold;
+  }
+  h4 {
+    @apply text-2xl;
+    @apply font-semibold;
+  }
+  h5 {
+    @apply text-xl;
+    @apply font-semibold;
+  }
+  h6 {
+    @apply text-lg;
+    @apply font-semibold;
+  }
+  a {
+    @apply text-primary-900;
+  }
 }
 
 .partner-logo {
