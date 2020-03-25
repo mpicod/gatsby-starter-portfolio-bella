@@ -55,14 +55,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   //   const homePage = await graphql(`
   //     {
-  //       prismicHomepage {
-  //         id
-  //         data {
-  //           page_subtitle {
-  //             text
-  //           }
-  //           title {
-  //             text
+  //       allPrismicHomepage {
+  //         edges {
+  //           node {
+  //             id
+  //             uid
   //           }
   //         }
   //       }
@@ -71,9 +68,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
   //   const templateHomePage = path.resolve("src/template/index.jsx");
 
-  //   homePage.data.prismicHomePage.edges.forEach(edge => {
+  //   homePage.data.allPrismicHomePage.edges.forEach(edge => {
   //     createPage({
-  //       path: `/`,
+  //       path: `/${edge.node.uid}`,
   //       component: templateHomePage,
   //       context: {
   //         uid: edge.node.uid

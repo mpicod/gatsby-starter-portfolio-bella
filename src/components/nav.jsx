@@ -29,7 +29,7 @@ const Nav = ({ isHome }) => {
                     text
                   }
                   link {
-                    url
+                    uid
                   }
                 }
                 items {
@@ -59,9 +59,9 @@ const Nav = ({ isHome }) => {
             <nav className="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6">
               <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-auto">
-                  <a href="/">
+                  <Link to="/">
                     <img className="h-8 w-auto sm:h-10" src={Logo} alt="" />
-                  </a>
+                  </Link>
                   <div className="-mr-2 flex items-center md:hidden">
                     <button
                       type="button"
@@ -85,13 +85,17 @@ const Nav = ({ isHome }) => {
                 </div>
                 <div className="hidden md:block md:ml-10">
                   {data.prismicLayout.data.nav.map(l => {
-                    return l.primary.link.url ? (
-                      <a
-                        href={l.primary.link.url}
+                    return l.primary.link.uid ? (
+                      <Link
+                        to={
+                          l.primary.link.uid == "home"
+                            ? "/"
+                            : l.primary.link.uid
+                        }
                         className="p-4 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
                       >
                         {l.primary.label[0].text}
-                      </a>
+                      </Link>
                     ) : (
                       <>
                         <a
@@ -106,16 +110,12 @@ const Nav = ({ isHome }) => {
                           <ul className="dropdown-menu absolute hidden text-gray-100 left-0 flex rounded-b">
                             {l.items.map(i => (
                               <li className="mb-0">
-                                <a
+                                <Link
                                   className=" bg-gray-900 hover:bg-gray-400 py-2 px-4 whitespace-no-wrap flex justify-center align-center"
-                                  href={i.sub_nav_link.uid}
+                                  to={i.sub_nav_link.uid}
                                 >
-                                  {/* <img
-                                    className="mx-2 nav-icon"
-                                    src={Moderniser}
-                                  /> */}
                                   <p>{i.sub_nav_link_label[0].text}</p>
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>

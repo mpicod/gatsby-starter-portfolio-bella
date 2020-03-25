@@ -5,7 +5,7 @@ import { Date, Link, RichText } from "prismic-reactjs";
 export default class ContactBanner extends Component {
   render() {
     return (
-      <div className="bg-gray-900" id="contact">
+      <div className="bg-gray-900" id="">
         <div className="pt-12 sm:pt-16 lg:pt-24">
           <div className="max-w-screen-xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto lg:max-w-none">
