@@ -22,7 +22,7 @@ const AboutPage = ({ data: { prismicAboutpage } }) => {
       />
       <Stats
         title={data.body[1].primary.key_number_title.text}
-        description={data.body[1].primary.key_numbers_intro.text}
+        description={data.body[1].primary.key_numbers_intro.raw}
         items={data.body[1].items}
       />
 
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
                 text
               }
               key_numbers_intro {
-                text
+                raw
               }
             }
           }

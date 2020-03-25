@@ -5,7 +5,7 @@ export default class RichTextColumn extends Component {
   render() {
     return (
       <div className="py-12 bg-gray-50 bg-white overflow-hidden md:py-20 lg:py-20">
-        <div className="relative max-w-screen-sm mx-auto px-4">
+        <div className="relative max-w-screen-sm mx-auto sm:px-6 ">
           <svg
             className="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
             width="404"

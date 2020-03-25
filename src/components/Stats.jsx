@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Date, Link, RichText } from "prismic-reactjs";
 
 export default class Stats extends Component {
   render() {
@@ -22,7 +23,9 @@ export default class Stats extends Component {
               data-sal-easing="ease-in-out"
               data-sal-duration="500"
             >
-              {this.props.description && this.props.description}
+              {this.props.description && (
+                <RichText render={this.props.description} />
+              )}
             </p>
           </div>
         </div>
