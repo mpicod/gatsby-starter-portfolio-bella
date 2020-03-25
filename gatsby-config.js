@@ -40,7 +40,8 @@ module.exports = {
         schemas: {
           homepage: require("./src/schemas/homepage.json"),
           pillarpage: require("./src/schemas/pillarpage.json"),
-          aboutpage: require("./src/schemas/aboutpage.json")
+          aboutpage: require("./src/schemas/aboutpage.json"),
+          legal: require("./src/schemas/legal.json")
         },
         shouldDownloadImage: ({ node, key, value }) => {
           // Return true to download the image or false to skip.
