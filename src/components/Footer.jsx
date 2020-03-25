@@ -132,6 +132,22 @@ const Footer = ({ isCase }) => {
           <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
+                <a href="/">
+                  <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                    Accueil
+                  </h4>
+                </a>
+              </div>
+              <div className="mt-12 md:mt-0">
+                <a href="/about">
+                  <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                    À propos
+                  </h4>
+                </a>
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
                 <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
                   Expertises
                 </h4>
@@ -163,22 +179,12 @@ const Footer = ({ isCase }) => {
                   </li>
                 </ul>
               </div>
-              {/* <div className="mt-12 md:mt-0">
-                <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
-                  Support
-                </h4>
-              </div> */}
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              {/* <div>
-                <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
-                  À propos
-                </h4>
-              </div> */}
               <div className="mt-12 md:mt-0">
-                <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
-                  Mentions Légales
-                </h4>
+                <a href="/legal">
+                  <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                    Mentions Légales
+                  </h4>
+                </a>
               </div>
             </div>
           </div>

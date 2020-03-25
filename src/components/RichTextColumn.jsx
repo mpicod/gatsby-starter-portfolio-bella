@@ -35,7 +35,11 @@ export default class RichTextColumn extends Component {
             <rect width="404" height="404" fill="url(#svg-pattern-squares-1)" />
           </svg>
           <div className="richtext relative">
-            <RichText render={this.props.content.raw} />
+            {this.props.content.raw ? (
+              <RichText render={this.props.content.raw} />
+            ) : (
+              this.props.content
+            )}
           </div>
         </div>
       </div>

@@ -107,7 +107,7 @@ const Nav = ({ isHome }) => {
                           aria-expanded="false"
                         >
                           {l.primary.label[0].text}
-                          <ul className="dropdown-menu absolute hidden text-gray-100 left-0 flex rounded-b">
+                          <ul className="dropdown-menu absolute hidden text-gray-100 left-0 flex rounded bg-gray-900">
                             {l.items.map(i => (
                               <li className="mb-0">
                                 <Link

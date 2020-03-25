@@ -48,7 +48,6 @@ const IndexPage = ({ data: { caseStudies, homePage } }) => {
       />
       <Pillars pillars={data.pillar_group} title={data.pillar_title.text} />
       {/* <Testimonial data={data.body[0]} /> */}
-      <div className="bg-gray-900" id="contact"></div>
       <ContactBanner
         title={data.contact_title.text}
         desc={data.contact_description.raw}
