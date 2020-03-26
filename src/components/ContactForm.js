@@ -44,8 +44,8 @@ export default () => {
   const handleOnSubmit = e => {
     e.preventDefault();
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
-    console.log("ENV", process.env.API_URL);
-    console.log("ENV", process.env);
+    // console.log("ENV", process.env.API_URL);
+    // console.log("ENV", process.env);
     // console.log("ENV API", API_URL);
     axios({
       method: "POST",

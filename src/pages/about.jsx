@@ -42,7 +42,7 @@ const AboutPage = ({ data: { prismicAboutpage } }) => {
             desc={f.feature_description.raw}
             label={f.feature_label.text}
             img={f.feature_image}
-            {...console.log(f.feature_image, "f.feature_image")}
+            // {...console.log(f.feature_image, "f.feature_image")}
           />
         ))}
       <Footer title={"Les Ops en toute confiance"} />

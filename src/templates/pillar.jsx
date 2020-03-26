@@ -17,7 +17,6 @@ import { Date, Link, RichText } from "prismic-reactjs";
 const PillarPage = ({ data: { prismicPillarpage } }) => {
   // const { edges } = PillarQuery;
   const { data } = prismicPillarpage;
-  console.log("DATAPILLAR", data);
   return (
     <Layout>
       <Nav></Nav>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useQueryParam, getSearchParams } from "gatsby-query-params";
+import queryString from "query-string";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Footer from "../components/Footer";
-import PartnersBanner from "../components/PartnersBanner";
+
 import Layout from "../components/Layout";
 import Testimonial from "../components/Testimonial";
 import Logos from "../components/Logos";
@@ -16,19 +16,24 @@ import Hero from "../components/Hero";
 import Mission from "../components/Mission";
 
 import Nav from "../components/nav";
-// import "../style/custom.scss";
 
-const IndexPage = ({ data: { caseStudies, homePage } }) => {
+const IndexPage = ({ data: { caseStudies, homePage } }, location) => {
   const { edges } = caseStudies;
   const { data } = homePage;
 
-  // const redirect = useQueryParam("redirect", ""); // key, defaultValue
-  // console.log(redirect); // log query param
-  // // console.log(getSearchParams()); // Log all parameters
+  const url = typeof window !== "undefined" ? window.location : "";
+
+  console.log(url, "URL");
+
+  const search = url.search ? queryString.parse(url.search) : {};
+
+  const { redirect } = search;
+
+  console.log("Search", search, "redirect", redirect);
 
   return (
     <Layout>
-      {/* {redirect ? <TopBanner /> : ""} */}
+      <TopBanner redirect={redirect} />
 
       <Nav isHome></Nav>
       <Hero
