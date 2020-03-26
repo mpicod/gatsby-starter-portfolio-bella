@@ -8,14 +8,14 @@ const TopBanner = props => {
   const getParam = () => {};
   const initialBanner = props.redirect == "pr" ? true : false;
 
-  const [isBannerOpen, setIsBannerOpen] = useState(true);
-  const toggleBannerTrueFalse = () => setIsBannerOpen(!isBannerOpen);
+  const [isBannerOpen, setIsBannerOpen] = useState(initialBanner);
+  const toggleBannerTrueFalse = () => setIsBannerOpen(false);
 
   console.log(props.redirect, "PROPS REDIRECT");
   console.log(initialBanner, "INITIAL STATE");
   return (
     <div
-      className={`relative bg-primary-600 flex `}
+      className={`relative bg-primary-600 ${isBannerOpen ? "flex" : "hidden"}`}
       style={{ zIndex: "99999" }}
     >
       <div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">

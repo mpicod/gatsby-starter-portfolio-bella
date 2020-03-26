@@ -29,8 +29,8 @@ const IndexPage = ({ data: { caseStudies, homePage } }, location) => {
 
   return (
     <Layout>
-      {redirect == "pr" && <TopBanner />}
-
+      {/* {redirect == "pr" && <TopBanner redirect={redirect} />} */}
+      <TopBanner redirect={redirect} />
       <Nav isHome></Nav>
       <Hero
         title={data.title.text}
