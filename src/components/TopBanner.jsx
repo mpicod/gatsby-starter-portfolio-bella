@@ -5,15 +5,17 @@ const TopBanner = props => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleTrueFalse = () => setIsOpen(!isOpen);
 
+  const getParam = () => {};
   const initialBanner = props.redirect == "pr" ? true : false;
-  const [isBannerOpen, setIsBannerOpen] = useState(initialBanner);
+
+  const [isBannerOpen, setIsBannerOpen] = useState(true);
   const toggleBannerTrueFalse = () => setIsBannerOpen(!isBannerOpen);
 
   console.log(props.redirect, "PROPS REDIRECT");
   console.log(initialBanner, "INITIAL STATE");
   return (
     <div
-      className={`relative bg-primary-600 ${isBannerOpen ? "block" : "hidden"}`}
+      className={`relative bg-primary-600 flex `}
       style={{ zIndex: "99999" }}
     >
       <div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
