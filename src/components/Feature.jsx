@@ -5,14 +5,14 @@ import { Date, Link, RichText } from "prismic-reactjs";
 export default class Feature extends Component {
   render() {
     return (
-      <div className="columns flex flex-wrap items-center max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 features">
+      <div className="columns flex flex-wrap items-center max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 features mb-8">
         {/* <div className="w-full md:hidden md:px-0 text-center mb-16">
           {this.props.img.localFile && (
             <Img fluid={this.props.img.localFile.childImageSharp.fluid} />
           )}
         </div> */}
 
-        <div className="w-full md:w-1/2 py-8 px-6 flex flex-col justify-center ">
+        <div className="w-full md:w-1/2 py-8 px-6 flex flex-col justify-center  ">
           <div
             className="flex items-center font-bold rounded-md text-primary-900"
             data-sal="slide-up"

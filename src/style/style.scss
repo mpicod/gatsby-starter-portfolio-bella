@@ -28,6 +28,11 @@ body {
   flex-direction: row-reverse;
 }
 
+.features > div:first-child {
+  border-top: 2px solid;
+  @apply border-primary-900;
+}
+
 .sent-check {
   width: 40px;
   color: white;
@@ -67,6 +72,8 @@ body {
 // }
 
 .richtext {
+  @apply text-base;
+  @apply text-gray-900;
   ol,
   ul {
     list-style: disc;

@@ -70,7 +70,7 @@ export default class SimpleSlider extends React.Component {
         style={{ minHeight: 0, minWidth: "0" }}
       >
         <div
-          className="relative rounded-lg block md:flex items-center bg-gray-200 shadow-xl"
+          className="relative rounded-lg block md:flex items-center bg-gray-200 shadow-xl  max-w-screen-lg mx-auto"
           style={{ minHeight: "19rem", marginTop: "-10em" }}
         >
           <div
@@ -88,7 +88,7 @@ export default class SimpleSlider extends React.Component {
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />
             )}
-            <div className="absolute inset-0 w-full h-full bg-green-900 opacity-75"></div>
+            {/* <div className="absolute inset-0 w-full h-full bg-green-900 opacity-75"></div> */}
             <div className="absolute inset-0 w-full h-full flex items-center justify-center fill-current text-white">
               {/* <svg
                 className="w-full h-24"

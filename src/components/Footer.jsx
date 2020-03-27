@@ -93,7 +93,11 @@ const Footer = ({ isCase }) => {
               Les Ops en toute confiance.
             </p>
             <div className="mt-8 flex">
-              <a href="#" className="text-gray-400 hover:text-gray-500">
+              <a
+                href="https://www.linkedin.com/company/zen-ops/"
+                target="_blank"
+                className="text-gray-400 hover:text-gray-500"
+              >
                 <span className="sr-only">LinkedIn</span>
                 <svg
                   className="h-6 w-6"
@@ -103,7 +107,11 @@ const Footer = ({ isCase }) => {
                   <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
                 </svg>
               </a>
-              <a href="#" className="ml-6 text-gray-400 hover:text-gray-500">
+              <a
+                href="https://twitter.com/zenops360"
+                target="_blank"
+                className="ml-6 text-gray-400 hover:text-gray-500"
+              >
                 <span className="sr-only">Twitter</span>
                 <svg
                   className="h-6 w-6"
@@ -138,15 +146,6 @@ const Footer = ({ isCase }) => {
                   </h4>
                 </a>
               </div>
-              <div className="mt-12 md:mt-0">
-                <a href="/about">
-                  <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
-                    À propos
-                  </h4>
-                </a>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
                   Expertises
@@ -178,6 +177,15 @@ const Footer = ({ isCase }) => {
                     </a>
                   </li>
                 </ul>
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div className="mt-12 md:mt-0">
+                <a href="/about">
+                  <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                    À propos
+                  </h4>
+                </a>
               </div>
               <div className="mt-12 md:mt-0">
                 <a href="/legal">

@@ -38,6 +38,7 @@ const IndexPage = ({ data: { caseStudies, homePage } }, location) => {
         isHome
       />
       <Carousel data={data.body[1]}></Carousel>
+      <Pillars pillars={data.pillar_group} title={data.pillar_title.text} />
       <Mission
         title={data.mission_title}
         data={data.missions}
@@ -47,7 +48,7 @@ const IndexPage = ({ data: { caseStudies, homePage } }, location) => {
         philosophy_title={data.philosophy_title}
         philosophy_description={data.philosophy_description}
       />
-      <Pillars pillars={data.pillar_group} title={data.pillar_title.text} />
+
       {/* <Testimonial data={data.body[0]} /> */}
       <ContactBanner
         title={data.contact_title.text}

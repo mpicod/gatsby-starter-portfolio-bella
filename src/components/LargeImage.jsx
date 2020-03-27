@@ -10,7 +10,7 @@ export default class Logos extends Component {
             {this.props.title && this.props.title}
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center">
-            <div className="max-w-screen-xl flex justify-center py-8  lg:px-16 xl:px-24 bg-gray-50 ">
+            <div className="max-w-screen-xl py-8  lg:px-16 xl:px-24 bg-gray-50 ">
               <img
                 // data-sal="slide-up"
                 // data-sal-delay="300"

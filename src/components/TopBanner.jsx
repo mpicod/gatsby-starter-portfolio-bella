@@ -5,7 +5,6 @@ const TopBanner = props => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleTrueFalse = () => setIsOpen(!isOpen);
 
-  const getParam = () => {};
   const initialBanner = props.redirect == "pr" ? true : false;
 
   const [isBannerOpen, setIsBannerOpen] = useState(initialBanner);
