@@ -44,7 +44,7 @@ const TopBanner = props => {
             class="flex p-2 rounded-md hover:bg-primary-500 focus:outline-none focus:bg-primary-500 transition ease-in-out duration-150"
           >
             <svg
-              class="h-6 w-6 text-white"
+              class="h-6 w-6 text-white "
               stroke="currentColor"
               fill="none"
               viewBox="0 0 24 24"
