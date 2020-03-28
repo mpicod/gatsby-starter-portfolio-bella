@@ -57,7 +57,7 @@
 
 module.exports = (req, res) => {
   //   const { data } = req.body;
-  console.log(req, "DATA)");
+  // console.log(req, "DATA)");
   const nodemailer = require("nodemailer");
 
   const transporter = nodemailer.createTransport({
@@ -68,6 +68,11 @@ module.exports = (req, res) => {
     }
   });
 
+  const validateEmail = email => {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  };
+
   const mailOptions = {
     from: req.body.email || "mktg.zenops360@gmail.com",
     to: "mktg.zenops360@gmail.com",
@@ -76,16 +81,18 @@ module.exports = (req, res) => {
       req.body.message + "   " + req.body.email ||
       "[No message]" + "   " + req.body.email
   };
-  console.log(req.body.email, req.body.message, "DATAMAGGLE)");
-  transporter.sendMail(mailOptions, function(error, info) {
-    if (error) {
-      console.log(error);
-      return res.status(500).send(err);
-    } else {
-      console.log("Email sent: " + info.response);
-      res.json({ success: true });
-    }
-  });
+
+  if (validateEmail(req.body.email)) {
+    transporter.sendMail(mailOptions, function(error, info) {
+      if (error) {
+        console.log(error);
+        return res.status(500).send(err);
+      } else {
+        console.log("Email sent: " + info.response);
+        res.json({ success: true });
+      }
+    });
+  }
 };
 
 // console.log("sendMail");
