@@ -44,12 +44,12 @@ export default () => {
   const handleOnSubmit = e => {
     e.preventDefault();
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
-    // console.log("ENV", process.env.API_URL);
+    console.log("ENV", process.env.API_URL);
     // console.log("ENV", process.env);
     // console.log("ENV API", API_URL);
     axios({
       method: "POST",
-      url: `https://gatsby-starter-portfolio-bella.now.sh/api/sendMail`,
+      url: `https://zenops.mktgzenops360.now.sh/api/sendMail`,
       data: inputs,
       headers: {}
     })
@@ -89,7 +89,6 @@ export default () => {
         <form
           className=" sm:flex flex-col"
           method="POST"
-          action="https://gatsby-starter-portfolio-bella.now.sh/api/sendMail"
           onSubmit={handleOnSubmit}
         >
           <input

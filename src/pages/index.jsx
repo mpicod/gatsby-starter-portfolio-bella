@@ -16,6 +16,11 @@ import Hero from "../components/Hero";
 import Mission from "../components/Mission";
 
 import Nav from "../components/nav";
+import {
+  Cookies,
+  CookiesProvider,
+  CookieBannerUniversal
+} from "react-cookie-banner";
 
 const IndexPage = ({ data: { caseStudies, homePage } }, location) => {
   const { edges } = caseStudies;
@@ -27,11 +32,23 @@ const IndexPage = ({ data: { caseStudies, homePage } }, location) => {
   const { redirect } = search;
   // console.log("Search", search, "redirect", redirect);
 
+  const cookies = new Cookies(/* Your cookie header, on browsers defaults to document.cookie */);
+
   return (
     <Layout>
-      {/* {redirect == "pr" && <TopBanner redirect={redirect} />} */}
-      <TopBanner redirect={redirect} />
+      <CookiesProvider cookies={cookies}>
+        <CookieBannerUniversal
+          message="Bonjour, nous utilisons des cookies pour le bon fonctionnement du site"
+          onAccept={() => {}}
+          cookie="user-has-accepted-cookies"
+          dismissOnScroll={false}
+          className="custom-cookie-banner"
+        />
+      </CookiesProvider>
+      {redirect == "pr" && <TopBanner redirect={redirect} />}
+      {/* <TopBanner redirect={redirect} /> */}
       <Nav isHome></Nav>
+
       <Hero
         title={data.title.text}
         description={data.page_subtitle.raw}

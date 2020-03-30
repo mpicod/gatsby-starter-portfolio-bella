@@ -10,8 +10,8 @@ const TopBanner = props => {
   const [isBannerOpen, setIsBannerOpen] = useState(initialBanner);
   const toggleBannerTrueFalse = () => setIsBannerOpen(false);
 
-  console.log(props.redirect, "PROPS REDIRECT");
-  console.log(initialBanner, "INITIAL STATE");
+  // console.log(props.redirect, "PROPS REDIRECT");
+  // console.log(initialBanner, "INITIAL STATE");
   return (
     <div
       className={`relative bg-primary-600 ${isBannerOpen ? "flex" : "hidden"}`}

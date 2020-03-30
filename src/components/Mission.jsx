@@ -153,7 +153,7 @@ export default class Mission extends Component {
               <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                 {this.props.data.map(m => (
                   <div>
-                    <div className="flex items-center justify-center h-12 w-16  rounded-md text-white p-2 mt-10">
+                    <div className="flex items-center justify-center w-16 bg-gray-900 rounded-md text-white p-2 mt-10">
                       {/* <svg
                         className="h-6 w-6"
                         stroke="currentColor"

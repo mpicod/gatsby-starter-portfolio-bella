@@ -1,9 +1,8 @@
 {
-  "version": 2,
   "build": {
     "env": {
       "API_URL": "https://zenops.mktgzenops360.now.sh/",
-      "GA_ID": "UA-160422852-1"
+      "GA_ID": "UA-160422852-2"
     }
   },
   "routes": [

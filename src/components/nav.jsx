@@ -115,6 +115,7 @@ const Nav = ({ isHome }) => {
                           data-toggle="dropdown"
                           aria-haspopup="true"
                           aria-expanded="false"
+                          key={i}
                         >
                           {l.primary.label[0].text}
                           <ul className="dropdown-menu absolute hidden text-gray-100 left-0 flex rounded bg-gray-900">

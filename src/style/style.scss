@@ -124,3 +124,9 @@ body {
 .text-xsm {
   font-size: 0.8rem;
 }
+
+.custom-cookie-banner.react-cookie-banner {
+  position: absolute;
+  bottom: 0;
+  @apply bg-primary-900;
+}

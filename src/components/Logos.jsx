@@ -10,8 +10,11 @@ export default class Logos extends Component {
           </p>
           <div className="mt-6 grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8 flex flex-wrap items-center justify-center">
             {/* {console.log("logos", this.props.items)} */}
-            {this.props.items?.map(i => (
-              <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 partner-logo">
+            {this.props.items?.map((l, i) => (
+              <div
+                className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 partner-logo"
+                key={i}
+              >
                 {/* {console.log("logo", i)} */}
                 <img
                   data-sal="slide-up"
@@ -19,8 +22,8 @@ export default class Logos extends Component {
                   data-sal-easing="ease-in-out"
                   data-sal-duration="500"
                   className="max-h-12 "
-                  src={i.partner_logo.url}
-                  alt={i.partner_logo.alt}
+                  src={l.partner_logo.url}
+                  alt={l.partner_logo.alt}
                 />
               </div>
             ))}
