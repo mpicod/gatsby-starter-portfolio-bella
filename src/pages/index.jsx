@@ -22,10 +22,10 @@ const IndexPage = ({ data: { caseStudies, homePage } }, location) => {
   const { data } = homePage;
 
   const url = typeof window !== "undefined" ? window.location : "";
-  console.log(url, "URL");
+  // console.log(url, "URL");
   const search = url.search ? queryString.parse(url.search) : {};
   const { redirect } = search;
-  console.log("Search", search, "redirect", redirect);
+  // console.log("Search", search, "redirect", redirect);
 
   return (
     <Layout>
