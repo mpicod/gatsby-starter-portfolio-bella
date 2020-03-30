@@ -17,19 +17,19 @@ const TopBanner = props => {
       className={`relative bg-primary-600 ${isBannerOpen ? "flex" : "hidden"}`}
       style={{ zIndex: "99999" }}
     >
-      <div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-        <div class="pr-16 sm:text-center sm:px-16">
-          <p class="font-medium text-white">
-            <span class="md:hidden">
+      <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+        <div className="pr-16 sm:text-center sm:px-16">
+          <p className="font-medium text-white">
+            <span className="md:hidden">
               Big news! Préstige Réseaux devient ZenOps !
             </span>
-            <span class="hidden md:inline">
+            <span className="hidden md:inline">
               Big news! Préstige Réseaux devient ZenOps !
             </span>
-            <span class="block sm:ml-2 sm:inline-block">
+            <span className="block sm:ml-2 sm:inline-block">
               <a
                 href="#"
-                class="text-white font-bold underline"
+                className="text-white font-bold underline"
                 onClick={() => setIsOpen(true)}
               >
                 En savoir plus &rarr;
@@ -37,14 +37,14 @@ const TopBanner = props => {
             </span>
           </p>
         </div>
-        <div class="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
+        <div className="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
           <button
             type="button"
             onClick={toggleBannerTrueFalse}
-            class="flex p-2 rounded-md hover:bg-primary-500 focus:outline-none focus:bg-primary-500 transition ease-in-out duration-150"
+            className="flex p-2 rounded-md hover:bg-primary-500 focus:outline-none focus:bg-primary-500 transition ease-in-out duration-150"
           >
             <svg
-              class="h-6 w-6 text-white "
+              className="h-6 w-6 text-white "
               stroke="currentColor"
               fill="none"
               viewBox="0 0 24 24"

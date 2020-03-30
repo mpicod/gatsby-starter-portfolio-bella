@@ -3,6 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import config from "../../config/website";
+// import MetaBanner from "../images/meta_zenops.png";
 
 const SEO = props => {
   const { caseNode, casePath, caseSEO } = props;
@@ -75,7 +76,7 @@ const SEO = props => {
     <Helmet>
       <html lang={config.siteLanguage} />
       <title>{title}</title>
-      <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" href="/favicons/apple-icon.png" />
       <link
         rel="icon"
         type="image/png"
@@ -92,7 +93,7 @@ const SEO = props => {
       <meta name="msapplication-TileColor" content="#b710a1" />
       <meta name="msapplication-config" content="browserconfig.xml" />
       <meta name="description" content={description} />
-      <meta name="image" content={image} />
+      <meta name="image" content="/meta_banner.png" />
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
@@ -102,7 +103,7 @@ const SEO = props => {
       {caseSEO ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content="/meta_banner.png" />
       <meta
         property="fb:app_id"
         content={config.siteFBAppID ? config.siteFBAppID : ""}
@@ -114,7 +115,7 @@ const SEO = props => {
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content="/meta_banner.png" />
       <link
         href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet"

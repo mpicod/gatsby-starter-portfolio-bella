@@ -15,12 +15,12 @@ export default class ContactBanner extends Component {
               <p className="mt-2 text-3xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
                 {this.props.title}
               </p>
-              <p className="mt-2 text-xl leading-7 text-gray-300 richtext">
+              <div className="mt-2 text-xl leading-7 text-gray-300 richtext">
                 {/* ZenOps et ses experts se tiennent à votre disposition pour
                 répondre à vos demandes ! N'hésitez pas à nous laisser un
                 message et nous reviendrons vers vous rapidement. */}
                 <RichText render={this.props.desc} />
-              </p>
+              </div>
             </div>
           </div>
         </div>

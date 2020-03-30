@@ -8,10 +8,10 @@ export default class Mission extends Component {
   render() {
     return (
       <>
-        <div class="pt-16 bg-gray-50 overflow-hidden lg:pt-24">
-          <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
+        <div className="pt-16 bg-gray-50 overflow-hidden lg:pt-24">
+          <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
             <svg
-              class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
+              className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
               width="404"
               height="784"
               fill="none"
@@ -31,7 +31,7 @@ export default class Mission extends Component {
                     y="0"
                     width="4"
                     height="4"
-                    class="text-gray-200"
+                    className="text-gray-200"
                     fill="currentColor"
                   />
                 </pattern>
@@ -43,21 +43,21 @@ export default class Mission extends Component {
               />
             </svg>
 
-            <div class="relative">
-              <h3 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+            <div className="relative">
+              <h3 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
                 {this.props.story.text}
               </h3>
-              {/* <p class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
+              {/* <p className="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Possimus magnam voluptatum cupiditate veritatis in, accusamus
                 quisquam.
               </p> */}
             </div>
 
-            <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-              <div class="relative">
+            <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+              <div className="relative">
                 <h4
-                  class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"
+                  className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"
                   data-sal="slide-up"
                   data-sal-delay="300"
                   data-sal-easing="ease-in-out"
@@ -65,18 +65,18 @@ export default class Mission extends Component {
                 >
                   {this.props.know_how_title.text}
                 </h4>
-                <p
-                  class="mt-3 text-lg leading-7 text-gray-500 richtext"
+                <div
+                  className="mt-3 text-lg leading-7 text-gray-500 richtext"
                   data-sal="slide-up"
                   data-sal-delay="300"
                   data-sal-easing="ease-in-out"
                   data-sal-duration="500"
                 >
                   <RichText render={this.props.description_know_how.raw} />
-                </p>
+                </div>
 
                 <h4
-                  class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9 mt-10"
+                  className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9 mt-10"
                   data-sal="slide-up"
                   data-sal-delay="300"
                   data-sal-easing="ease-in-out"
@@ -84,20 +84,20 @@ export default class Mission extends Component {
                 >
                   {this.props.philosophy_title.text}
                 </h4>
-                <p
-                  class="mt-3 text-lg leading-7 text-gray-500 richtext"
+                <div
+                  className="mt-3 text-lg leading-7 text-gray-500 richtext"
                   data-sal="slide-up"
                   data-sal-delay="300"
                   data-sal-easing="ease-in-out"
                   data-sal-duration="500"
                 >
                   <RichText render={this.props.philosophy_description.raw} />
-                </p>
+                </div>
               </div>
 
-              <div class="mt-10 -mx-4 relative lg:mt-0">
+              <div className="mt-10 -mx-4 relative lg:mt-0">
                 <svg
-                  class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
+                  className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
                   width="784"
                   height="404"
                   fill="none"
@@ -117,7 +117,7 @@ export default class Mission extends Component {
                         y="0"
                         width="4"
                         height="4"
-                        class="text-gray-200"
+                        className="text-gray-200"
                         fill="currentColor"
                       />
                     </pattern>
@@ -129,7 +129,7 @@ export default class Mission extends Component {
                   />
                 </svg>
                 <img
-                  class="relative mx-auto"
+                  className="relative mx-auto"
                   width="490"
                   src={La_Defense}
                   alt=""
@@ -137,8 +137,8 @@ export default class Mission extends Component {
               </div>
             </div>
           </div>
-          <div class="py-12 bg-gray-100 mt-10">
-            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
+          <div className="py-12 bg-gray-100 mt-10">
+            <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
               <div className="relative">
                 <h3
                   className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 pb-12 mt-10"
@@ -150,12 +150,12 @@ export default class Mission extends Component {
                   {this.props.title.text}
                 </h3>
               </div>
-              <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+              <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                 {this.props.data.map(m => (
                   <div>
-                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white p-2 mt-10">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white p-2 mt-10">
                       {/* <svg
-                        class="h-6 w-6"
+                        className="h-6 w-6"
                         stroke="currentColor"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -169,9 +169,9 @@ export default class Mission extends Component {
                       </svg> */}
                       <img src={m.mission_icon.url} />
                     </div>
-                    <div class="mt-5">
+                    <div className="mt-5">
                       <h5
-                        class="text-lg leading-6 font-medium text-gray-900"
+                        className="text-lg leading-6 font-medium text-gray-900"
                         data-sal="slide-up"
                         data-sal-delay="300"
                         data-sal-easing="ease-in-out"
@@ -179,22 +179,22 @@ export default class Mission extends Component {
                       >
                         {m.mission_title1.text}
                       </h5>
-                      <p
-                        class="mt-2 text-base leading-6 text-gray-500 richtext"
+                      <div
+                        className="mt-2 text-base leading-6 text-gray-500 richtext"
                         data-sal="slide-up"
                         data-sal-delay="300"
                         data-sal-easing="ease-in-out"
                         data-sal-duration="500"
                       >
                         <RichText render={m.mission_text.raw} />
-                      </p>
+                      </div>
                     </div>
                   </div>
                 ))}
-                {/* <div class="mt-10 lg:mt-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                {/* <div className="mt-10 lg:mt-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
                 <svg
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   stroke="currentColor"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -207,21 +207,21 @@ export default class Mission extends Component {
                   />
                 </svg>
               </div>
-              <div class="mt-5">
-                <h5 class="text-lg leading-6 font-medium text-gray-900">
+              <div className="mt-5">
+                <h5 className="text-lg leading-6 font-medium text-gray-900">
                   No hidden fees
                 </h5>
-                <p class="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-500">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Maiores impedit perferendis suscipit eaque, iste dolor
                   cupiditate blanditiis ratione.
                 </p>
               </div>
             </div>
-            <div class="mt-10 lg:mt-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+            <div className="mt-10 lg:mt-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
                 <svg
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   stroke="currentColor"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -234,11 +234,11 @@ export default class Mission extends Component {
                   />
                 </svg>
               </div>
-              <div class="mt-5">
-                <h5 class="text-lg leading-6 font-medium text-gray-900">
+              <div className="mt-5">
+                <h5 className="text-lg leading-6 font-medium text-gray-900">
                   Transfers are instant
                 </h5>
-                <p class="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-500">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Maiores impedit perferendis suscipit eaque, iste dolor
                   cupiditate blanditiis ratione.
@@ -347,7 +347,7 @@ export default class Mission extends Component {
 // </div>;
 
 // <svg
-//               class="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
+//               className="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
 //               width="404"
 //               height="784"
 //               fill="none"
@@ -367,7 +367,7 @@ export default class Mission extends Component {
 //                     y="0"
 //                     width="4"
 //                     height="4"
-//                     class="text-gray-200"
+//                     className="text-gray-200"
 //                     fill="currentColor"
 //                   />
 //                 </pattern>
@@ -379,25 +379,25 @@ export default class Mission extends Component {
 //               />
 //             </svg>
 
-//             <div class="relative mt-12 sm:mt-16 lg:mt-24">
-//               <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
-//                 <div class="lg:col-start-2">
-//                   <h4 class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
+//             <div className="relative mt-12 sm:mt-16 lg:mt-24">
+//               <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+//                 <div className="lg:col-start-2">
+//                   <h4 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
 //                     Notre Philosophie
 //                   </h4>
-//                   <p class="mt-3 text-lg leading-7 text-gray-500">
+//                   <p className="mt-3 text-lg leading-7 text-gray-500">
 //                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
 //                     Impedit ex obcaecati natus eligendi delectus, cum deleniti
 //                     sunt in labore nihil quod quibusdam expedita nemo.
 //                   </p>
 
-//                   <ul class="mt-10">
+//                   <ul className="mt-10">
 //                     <li>
-//                       <div class="flex">
-//                         {/* <div class="flex-shrink-0">
-//                           <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+//                       <div className="flex">
+//                         {/* <div className="flex-shrink-0">
+//                           <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
 //                             <svg
-//                               class="h-6 w-6"
+//                               className="h-6 w-6"
 //                               stroke="currentColor"
 //                               fill="none"
 //                               viewBox="0 0 24 24"
@@ -411,11 +411,11 @@ export default class Mission extends Component {
 //                             </svg>
 //                           </div>
 //                         </div> */}
-//                         <div class="ml-4">
-//                           <h5 class="text-lg leading-6 font-medium text-gray-900">
+//                         <div className="ml-4">
+//                           <h5 className="text-lg leading-6 font-medium text-gray-900">
 //                             Mobile notifications
 //                           </h5>
-//                           <p class="mt-2 text-base leading-6 text-gray-500">
+//                           <p className="mt-2 text-base leading-6 text-gray-500">
 //                             Lorem ipsum, dolor sit amet consectetur adipisicing
 //                             elit. Maiores impedit perferendis suscipit eaque,
 //                             iste dolor cupiditate blanditiis ratione.
@@ -423,12 +423,12 @@ export default class Mission extends Component {
 //                         </div>
 //                       </div>
 //                     </li>
-//                     <li class="mt-10">
-//                       <div class="flex">
-//                         {/* <div class="flex-shrink-0">
-//                           <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+//                     <li className="mt-10">
+//                       <div className="flex">
+//                         {/* <div className="flex-shrink-0">
+//                           <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
 //                             <svg
-//                               class="h-6 w-6"
+//                               className="h-6 w-6"
 //                               stroke="currentColor"
 //                               fill="none"
 //                               viewBox="0 0 24 24"
@@ -442,11 +442,11 @@ export default class Mission extends Component {
 //                             </svg>
 //                           </div>
 //                         </div> */}
-//                         <div class="ml-4">
-//                           <h5 class="text-lg leading-6 font-medium text-gray-900">
+//                         <div className="ml-4">
+//                           <h5 className="text-lg leading-6 font-medium text-gray-900">
 //                             Reminder emails
 //                           </h5>
-//                           <p class="mt-2 text-base leading-6 text-gray-500">
+//                           <p className="mt-2 text-base leading-6 text-gray-500">
 //                             Lorem ipsum, dolor sit amet consectetur adipisicing
 //                             elit. Maiores impedit perferendis suscipit eaque,
 //                             iste dolor cupiditate blanditiis ratione.
@@ -457,9 +457,9 @@ export default class Mission extends Component {
 //                   </ul>
 //                 </div>
 
-//                 <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+//                 <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
 //                   {/* <svg
-//                     class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
+//                     className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
 //                     width="784"
 //                     height="404"
 //                     fill="none"
@@ -479,7 +479,7 @@ export default class Mission extends Component {
 //                           y="0"
 //                           width="4"
 //                           height="4"
-//                           class="text-gray-200"
+//                           className="text-gray-200"
 //                           fill="currentColor"
 //                         />
 //                       </pattern>
@@ -491,7 +491,7 @@ export default class Mission extends Component {
 //                     />
 //                   </svg> */}
 //                   <img
-//                     class="relative mx-auto"
+//                     className="relative mx-auto"
 //                     width="490"
 //                     src="/img/features/feature-example-2.png"
 //                     alt=""

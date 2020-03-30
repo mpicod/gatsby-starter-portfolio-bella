@@ -102,21 +102,21 @@ export default class SimpleSlider extends React.Component {
 
           <div className="w-full md:w-3/5 h-full items-center bg-gray-200 rounded-lg">
             <Slider {...settings}>
-              {this.props.data.items.map(i => (
-                <div>
+              {this.props.data.items.map((s, i) => (
+                <div key={i}>
                   <div className="p-12 md:pr-24 md:pl-16 md:py-12 flex flex-col justify-center">
                     <h2 className="mt-2 text-3xl leading-9 font-bold tracking-tight sm:text-2xl">
-                      {i.carousel_title.text}
+                      {s.carousel_title.text}
                     </h2>
                     <p className="text-gray-600">
                       <span className="text-gray-900">
-                        {i.carousel_description.text}
+                        {s.carousel_description.text}
                       </span>
                     </p>
-                    {i.carousel_link.url ? (
+                    {s.carousel_link.url ? (
                       <a
                         className="flex items-baseline mt-3 text-primary-600 hover:text-primary-900 focus:text-primary-900"
-                        href={i.carousel_link.url}
+                        href={s.carousel_link.url}
                       >
                         <span>En savoir plus</span>
                         <span className="text-xs ml-1">&#x279c;</span>

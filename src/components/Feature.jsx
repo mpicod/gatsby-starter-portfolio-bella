@@ -31,7 +31,7 @@ export default class Feature extends Component {
           >
             {this.props.title}
           </h2>
-          <p
+          <div
             className="mt-6 text-lg leading-7 text-gray-500 richtext"
             data-sal="slide-up"
             data-sal-delay="300"
@@ -39,7 +39,7 @@ export default class Feature extends Component {
             data-sal-duration="500"
           >
             <RichText render={this.props.desc} />
-          </p>
+          </div>
         </div>
 
         <div

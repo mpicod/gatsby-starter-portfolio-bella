@@ -36,12 +36,13 @@ const AboutPage = ({ data: { prismicAboutpage } }) => {
         {data.features_title.text}
       </h2>
       {data.features &&
-        data.features.map(f => (
+        data.features.map((f, i) => (
           <Feature
             title={f.feature_title.text}
             desc={f.feature_description.raw}
             label={f.feature_label.text}
             img={f.feature_image}
+            key={i}
             // {...console.log(f.feature_image, "f.feature_image")}
           />
         ))}

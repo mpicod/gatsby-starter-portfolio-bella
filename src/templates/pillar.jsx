@@ -68,12 +68,13 @@ const PillarPage = ({ data: { prismicPillarpage } }) => {
       <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mb-16">
         {data.features_title.text}
       </h2>
-      {data.features.map(f => (
+      {data.features.map((f, i) => (
         <Feature
           title={f.feature_title.text}
           desc={f.feature_description.raw}
           label={f.feature_label.text}
           img={f.feature_image}
+          key={i}
           // {...console.log(f.feature_image, "f.feature_image")}
         />
       ))}

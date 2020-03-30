@@ -91,10 +91,11 @@ const Nav = ({ isHome }) => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden md:block md:ml-10">
-                  {data.prismicLayout.data.nav.map(l => {
+                <div className="hidden md:ml-10 md:inline-flex items-center">
+                  {data.prismicLayout.data.nav.map((l, i) => {
                     return l.primary.link.uid ? (
                       <Link
+                        key={i}
                         to={
                           l.primary.link.uid == "home"
                             ? "/"
@@ -106,7 +107,7 @@ const Nav = ({ isHome }) => {
                       </Link>
                     ) : (
                       <>
-                        <a
+                        <div
                           className="relative p-3 rounded-t font-medium text-gray-500 hover:text-gray-100 hover:bg-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out dropdown"
                           id="navbarDropdownMenuLink"
                           role="button"
@@ -116,18 +117,18 @@ const Nav = ({ isHome }) => {
                         >
                           {l.primary.label[0].text}
                           <ul className="dropdown-menu absolute hidden text-gray-100 left-0 flex rounded bg-gray-900">
-                            {l.items.map(i => (
-                              <li className="mb-0">
+                            {l.items.map((n, i) => (
+                              <li className="mb-0" key={i}>
                                 <Link
                                   className=" bg-gray-900 hover:bg-gray-400 hover:text-gray-900 py-2 px-4 whitespace-no-wrap flex justify-center align-center"
-                                  to={i.sub_nav_link.uid}
+                                  to={n.sub_nav_link.uid}
                                 >
-                                  <p>{i.sub_nav_link_label[0].text}</p>
+                                  <p>{n.sub_nav_link_label[0].text}</p>
                                 </Link>
                               </li>
                             ))}
                           </ul>
-                        </a>
+                        </div>
                       </>
                     );
                   })}

@@ -16,7 +16,7 @@ export default class Stats extends Component {
             >
               {this.props.title && this.props.title}
             </h2>
-            <p
+            <div
               className="mt-3 text-xl leading-7 text-gray-500 sm:mt-4 richtext"
               data-sal="slide-up"
               data-sal-delay="300"
@@ -26,7 +26,7 @@ export default class Stats extends Component {
               {this.props.description && (
                 <RichText render={this.props.description} />
               )}
-            </p>
+            </div>
           </div>
         </div>
         <div className="mt-10 pb-12 bg-gray-900 sm:pb-16">

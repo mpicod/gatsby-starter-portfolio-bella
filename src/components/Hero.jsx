@@ -19,7 +19,7 @@ export default class Hero extends Component {
           </h1>
           {/* <RichText render="<p> Coucou RICH TEXT </p>" /> */}
 
-          <p
+          <div
             data-sal="slide-up"
             data-sal-delay="300"
             data-sal-easing="ease-in-out"
@@ -27,7 +27,7 @@ export default class Hero extends Component {
             className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl richtext"
           >
             <RichText render={this.props.description} />
-          </p>
+          </div>
           <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
             {/* <div className="rounded-md shadow transform hover:-translate-y-1 transition duration-300">
               <a
