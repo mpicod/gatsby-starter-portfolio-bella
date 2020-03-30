@@ -95,6 +95,7 @@ const Nav = ({ isHome }) => {
                   {data.prismicLayout.data.nav.map((l, i) => {
                     return l.primary.link.uid ? (
                       <Link
+                        activeClassName={"text-primary-900"}
                         key={i}
                         to={
                           l.primary.link.uid == "home"
@@ -122,6 +123,7 @@ const Nav = ({ isHome }) => {
                                 <Link
                                   className=" bg-gray-900 hover:bg-gray-400 hover:text-gray-900 py-2 px-4 whitespace-no-wrap flex justify-center align-center"
                                   to={n.sub_nav_link.uid}
+                                  activeClassName={"text-primary-900"}
                                 >
                                   <p>{n.sub_nav_link_label[0].text}</p>
                                 </Link>
